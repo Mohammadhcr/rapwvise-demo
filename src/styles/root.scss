@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    font-family: "IRANSansX", "Inter";
+    font-weight: 400;
+}
+
+// @font-face{
+// 	font-family: "IRANSansX100";
+// 	font-style: normal;
+// 	font-weight: 100;
+// 	src: url('../src/fonts/IRANSansX-Thin.woff') format('woff');
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX200";
+// 	font-style: normal;
+// 	font-weight: 200;
+// 	src: url('../src/fonts/IRANSansX-UltraLight.woff') format('woff');	
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX300";
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	src: url('../src/fonts/IRANSansX-light.woff') format('woff');		 
+// }
+
+// @font-face{
+//   font-family: "IRANSansX400";
+//   font-style: normal;
+//   font-weight: normal;
+//   src: url('../src/fonts/IRANSansX-regular.woff') format('woff');	
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX500";
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	src: url('../src/fonts/IRANSansX-medium.woff') format('woff');		 
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX600";
+// 	font-style: normal;
+// 	font-weight: 600;
+// 	src: url('../src/fonts/IRANSansX-demibold.woff') format('woff');	 
+// }
+
+// @font-face{
+//   font-family: "IRANSansX700";
+//   font-style: normal;
+//   font-weight: bold;
+//   src: url('../src/fonts/IRANSansX-bold.woff') format('woff');	 
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX800";
+// 	font-style: normal;
+// 	font-weight: 800;
+// 	src: url('../src/fonts/IRANSansX-extrabold.woff') format('woff');		 
+// }
+
+// @font-face{
+// 	font-family: "IRANSansX900";
+// 	font-style: normal;
+// 	font-weight: 900;
+// 	src: url('../src/fonts/IRANSansX-black.woff') format('woff');		 
+// }
+
+.lightMode{
+  --color1: #050505;
+  --color2: #757575;
+  --color3: #00c399;
+  --color4: #0077ff;
+  --color5: #f5f7f6;
+  --color6: #fff;
+  --color7: #dfdfdf;
+  --color8: #0088ff;
+  background: var(--color5);
+  direction: rtl;
+}
+
+.darkMode{
+  --color1: #ffffff;
+  --color2: #757575;
+  --color3: #00c399;
+  --color4: #0077ff;
+  --color5: #131418;
+  --color6: #222222;
+  --color7: #3d3d3d;
+  --color8: #0088ff;
+  background: var(--color5);
+  direction: rtl;
+}

@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+import RapWVise from './pages/RapWVise';
+import Hamseda from './pages/Hamseda';
+import Notes from './pages/Notes';
+import Comments from './pages/Comments';
+import Navbar from "./components/Navbar";
+import AboutUs from "./pages/AboutUs";
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Podcast from './pages/Podcast';
+
+const App = () => {
+
+  const [theme, setTheme] = useState(false);
+
+    const toggleHandler = () =>{
+        setTheme(!theme);
+    }
+
+    const autoTheme = () => {
+        const date = new Date();
+        const time = date.getHours();
+
+        if (time > 7 && time < 20) {
+            setTheme(false);
+        }
+        else{
+            setTheme(true);
+        }
+    }
+
+    useEffect(() => autoTheme(), []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <div className={theme ? "darkMode" : "lightMode"}>
+          <Navbar toggle={toggleHandler} theme={theme} />
+          <Routes>
+            <Route path='/' element={<RapWVise />} />
+            <Route path='/hamseda' element={<Hamseda />} />
+            <Route path='/hamseda/:id' element={<Podcast />} />
+            <Route path='/comments' element={<Comments />} />
+            <Route path='/notes' element={<Notes />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/Signup' element={<Signup />} />
+            <Route path='/aboutus' element={<AboutUs />} />
+          </Routes>
+        </div>
+      </>
   );
 }
 

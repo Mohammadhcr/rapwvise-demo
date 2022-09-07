@@ -1,0 +1,355 @@
+@import "root";
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background: var(--color6);
+    width: 100%;
+    height: 4rem;
+    padding: 0 5rem;
+    z-index: 20;
+    user-select: none;
+}
+
+.leftSide{
+    display: flex;
+    align-items: center;
+}
+  
+.logoTitle a h1{
+    color: var(--color3);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+  
+.rightSide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+nav{
+    padding: 0 1rem;
+    
+    ul{
+        list-style: none;
+        display: flex;
+  
+        li{
+            margin: 10px;
+            font-size: 1rem;
+  
+            a{
+                color: var(--color2);
+                padding: 3px;
+  
+                &:hover{
+                    color: var(--color1);
+                }
+            }
+        }
+    }
+}
+  
+nav ul li:nth-child(4) a{
+    color: var(--color1);
+    padding: 10px;
+    border-radius: 0.7rem;
+    background: var(--color7);
+}
+
+nav ul li:last-child a{
+    background: var(--color6);
+    color: var(--color3);
+    border: 2px solid var(--color3);
+    padding: 10px;
+    border-radius: 0.7rem;
+}
+  
+nav ul li:last-child a:hover{
+    background: var(--color3);
+    color: #fff;
+}
+
+.menuList{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    border-left: 1px solid var(--color7);
+    background: var(--color6);
+    -webkit-font-smoothing: antialiased;
+    transform: translate(100%, 0);
+    z-index: 10;
+  
+    .menuItems{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+        padding-top: 90px;
+        list-style: none;
+        border-bottom: 2px solid var(--color7);
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+  
+        a{
+            width: 100%;
+            margin: 5px auto;
+            
+            li{
+            font-size: 1.2rem;
+            border-radius: 1rem;
+            font-weight: 500;
+            color: var(--color2);
+            transition: all 0.2s;
+            padding: 15px 30px;
+            }
+        }
+    }
+
+    .menuUser{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        padding: 0 5%;
+  
+        a{
+            width: 50%;
+            
+            li{
+            font-size: 1.2rem;
+            color: var(--color2);
+            font-weight: 700;
+            transition: all 0.2s;
+            padding: 15px;
+            text-align: center;
+            }
+        }
+    }
+  
+    ul a li:hover{
+        background: #99999922;
+        color: var(--color1);
+    }
+    
+    .menuUser a:first-child li{
+        color: var(--color1);
+        background: var(--color7);
+        border-radius: 0 1rem 1rem 0;
+    }
+    .menuUser a:last-child li{
+        background: var(--color3);
+        color: #fff;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+.menuListActive{
+    transform: none;
+}
+
+.hamburgerMenu{
+    display: none;
+    width: 24px;
+    margin-left: 1.5rem;
+    height: auto;
+    z-index: 30;
+    cursor: pointer;
+    user-select: none;
+      
+    span {
+        display: block;
+        border-radius: 0.7rem;
+        width: 100%;
+        height: 2px;
+        background: var(--color2);
+        margin: 5px 0;
+        -webkit-transition: all 0.25s;
+        transition: transform 0.25s;
+
+        &:nth-child(1){
+            transform: none;
+        }
+          
+        &:nth-child(2){
+            opacity: 1;
+            transform: none;
+        }
+          
+        &:nth-child(3){
+            transform: none;
+        }
+    }
+}
+
+.hamburgerMenuActive{
+
+    span{
+
+        &:nth-child(1){
+            transform: rotate(-46deg) translate(-5px, 5px);
+        }
+        
+        &:nth-child(2){
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        &:nth-child(3){
+            transform: rotate(46deg) translate(-5px, -4px);
+        }
+    }
+}
+
+.toggle{
+      
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 26px;
+        width: 45px;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 5;
+        background: #ccc;
+            
+        &::before{
+            position: absolute;
+            right: 3px;
+            top: 50%;
+            content: '';
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            z-index: 10;
+            transition: all 0.3s;
+        }
+
+        .bxSun{
+            position: absolute;
+            left: 4px;
+            opacity: 1;
+            color: #050505;
+        }
+          
+        .bxMoon{
+            position: absolute;
+            opacity: 0;
+            right: 4px;
+            color: #fff;
+        }
+    }
+}
+
+.toggleActive{
+
+    span{
+        background: var(--color3);
+            
+        &::before{
+            right: 22px;
+        }
+
+        .bxSun{
+            opacity: 0;
+        }
+          
+        .bxMoon{
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+    header{
+        padding: 0 5rem;
+    }
+}
+    
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    header{
+        padding: 0 4rem;
+    }
+}
+    
+@media screen and (min-width: 781px) and (max-width: 1024px){
+    header{
+        padding: 0 3rem;
+    }
+}
+    
+@media screen and (min-width: 641px) and (max-width: 780px){
+    header{
+        padding: 0 2rem;
+    }
+    
+    .hamburgerMenu{
+        display: block;
+    }
+
+    .menuList{
+        display: flex;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    header .logoTitle h1 a{
+        font-size: 1.8rem;
+    }
+}
+    
+@media screen and (min-width: 481px) and (max-width: 640px){
+    header{
+        padding: 0 2rem;
+    }
+    
+    .hamburgerMenu{
+        display: block;
+    }
+
+    .menuList{
+        display: flex;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    header .logoTitle h1 a{
+        font-size: 1.6rem;
+    }
+}
+    
+@media screen and (min-width: 120px) and (max-width: 480px){
+    header{
+        padding: 0 1.5rem;
+    }
+    
+    .hamburgerMenu{
+        display: block;
+    }
+
+    .menuList{
+        display: flex;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    header .logoTitle h1 a{
+        font-size: 1.5rem;
+    }
+}

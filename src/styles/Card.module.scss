@@ -1,0 +1,49 @@
+@import "root";
+
+.card{
+    background: var(--color6);
+    opacity: 1;
+    min-width: 300px;
+    max-width: 800px;
+    user-select: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+
+    .cardPhoto{
+        width: 180px;
+        height: 180px;
+        margin: 0.7rem;
+
+        img{
+            width: 100%;
+            border-radius: 0.7rem;
+        }
+    }
+}
+    
+.cardContent{
+    padding: 0 1rem;
+}
+    
+.cardTitle{
+    font-size: 1.5rem;
+    color: var(--color1);
+    font-weight: 700;
+}
+    
+.cardP{
+    font-size: 1.1rem;
+    color: var(--color2);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+    .cardTitle{
+        font-size: 1.4rem;
+    }
+    
+    .cardP{
+        font-size: 1rem;
+    }
+}
