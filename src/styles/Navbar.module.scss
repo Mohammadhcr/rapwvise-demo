@@ -20,9 +20,13 @@ header{
 }
   
 .logoTitle a h1{
-    color: var(--color3);
+    background: rgba(158,0,255,1);
+    background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-family: "IRANSansX800";
 }
   
 .rightSide{
@@ -54,7 +58,7 @@ nav{
     }
 }
   
-nav ul li:nth-child(4) a{
+nav ul li:nth-child(5) a{
     color: var(--color1);
     padding: 10px;
     border-radius: 0.7rem;
@@ -62,16 +66,16 @@ nav ul li:nth-child(4) a{
 }
 
 nav ul li:last-child a{
-    background: var(--color6);
-    color: var(--color3);
-    border: 2px solid var(--color3);
+    background: rgba(158,0,255,0.1);
+    background: linear-gradient(135deg, rgba(158,0,255,0.1), rgba(255,0,35,0.1));
+    color: #fff;
     padding: 10px;
     border-radius: 0.7rem;
 }
   
 nav ul li:last-child a:hover{
-    background: var(--color3);
-    color: #fff;
+    background: rgba(158,0,255,1);
+    background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
 }
 
 .menuList{
@@ -80,7 +84,7 @@ nav ul li:last-child a:hover{
     position: fixed;
     width: 300px;
     height: 100vh;
-    border-left: 1px solid var(--color7);
+    border-left: 2px solid var(--color7);
     background: var(--color6);
     -webkit-font-smoothing: antialiased;
     transform: translate(100%, 0);
@@ -104,7 +108,7 @@ nav ul li:last-child a:hover{
             li{
             font-size: 1.2rem;
             border-radius: 1rem;
-            font-weight: 500;
+            font-family: "IRANSansX500";
             color: var(--color2);
             transition: all 0.2s;
             padding: 15px 30px;
@@ -125,7 +129,7 @@ nav ul li:last-child a:hover{
             li{
             font-size: 1.2rem;
             color: var(--color2);
-            font-weight: 700;
+            font-family: "IRANSansX700";
             transition: all 0.2s;
             padding: 15px;
             text-align: center;
@@ -144,7 +148,8 @@ nav ul li:last-child a:hover{
         border-radius: 0 1rem 1rem 0;
     }
     .menuUser a:last-child li{
-        background: var(--color3);
+        background: rgba(158,0,255,1);
+        background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
         color: #fff;
         border-radius: 1rem 0 0 1rem;
     }
@@ -254,7 +259,8 @@ nav ul li:last-child a:hover{
 .toggleActive{
 
     span{
-        background: var(--color3);
+        background: rgba(158,0,255,1);
+        background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
             
         &::before{
             right: 22px;

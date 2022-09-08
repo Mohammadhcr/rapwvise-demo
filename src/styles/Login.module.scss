@@ -14,9 +14,13 @@
     text-align: center;
     cursor: default;
     font-size: 2.2rem;
-    color: var(--color3);
+    background: rgba(158,0,255,1);
+    background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     user-select: none;
-    font-weight: 900;
+    font-family: "IRANSansX900";
 }
 
 .login{
@@ -42,7 +46,7 @@
             color: var(--color2);
             padding-bottom: 0.5rem;
             user-select: none;
-            font-weight: 500;
+            font-family: "IRANSansX500";
         }
 
         div{
@@ -57,7 +61,7 @@
             input{
                 width: 100%;
                 font-size: 1.1rem;
-                font-weight: 300;
+                font-family: "IRANSansX400";
                 outline: none;
                 border: none;
                 margin-right: 0.5rem;
@@ -77,7 +81,7 @@
     color: var(--color4);
     cursor: pointer;
     transition: all 0.2s;
-    font-weight: 700;
+    font-family: "IRANSansX700";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +103,7 @@
     p{
         color: var(--color2);
         font-size: 0.9rem;
-        font-weight: 500;
+        font-family: "IRANSansX500";
     }
     
     a{
@@ -119,7 +123,7 @@
     padding: 0.5rem 0;
     font-size: 0.9rem;
     border-radius: 0.7rem;
-    font-weight: 600;
+    font-family: "IRANSansX600";
     cursor: pointer;
     border: none;
     display: flex;

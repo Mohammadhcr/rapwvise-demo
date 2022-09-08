@@ -9,17 +9,19 @@
 
     .myName{
         padding-bottom: 5rem;
-        border-bottom: var(--border);
+        border-bottom:2px solid var(--color7);
         text-align: center;
 
         h1{
-            color: var(--firstColor);
+            color: var(--color1);
             font-size: 6rem;
+            font-family: "IRANSansX900";
         }
 
         h3{
-            color: var(--secColor);
+            color: var(--color2);
             font-size: 3rem;
+            font-weight: 700;
         }
     }
 
@@ -37,7 +39,8 @@
         text-align: center;
 
         h2{
-            color: var(--firstColor);
+            color: var(--color1);
+            font-family: "IRANSansX600";
             font-size: 2rem;
             padding: 5rem 0 2rem;
         }
@@ -51,15 +54,16 @@
             a{
                 padding: 0.8rem 0;
                 font-size: 1.1rem;
-                color: #026cd9;
-                background: var(--firstBack);
+                color: var(--color3);
+                background: rgba(158,0,255,0.1);
+                background: linear-gradient(135deg, rgba(158,0,255,0.1), rgba(255,0,35,0.1));
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 0.7rem;
 
                 i{
-                    padding-right: 5px;
+                    padding-left: 5px;
                 }
             }
         }
@@ -68,13 +72,13 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
     .myMain{
-        padding: 80px 8rem 0;
+        padding: 4rem 8rem 0;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .myMain{
-        padding: 80px 6rem 0;
+        padding: 4rem 6rem 0;
 
         .myLinks{
             width: 80%;
@@ -88,7 +92,7 @@
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .myMain{
-        padding: 80px 4rem 0;
+        padding: 4rem 4rem 0;
     
         .myName{
             padding-bottom: 4rem;
@@ -123,7 +127,7 @@
     .myMain{
         height: auto;
         min-height: 100vh;
-        padding: 80px 3rem 0;
+        padding: 4rem 3rem 0;
 
         .myName{
             padding-bottom: 3rem;
@@ -160,7 +164,7 @@
     .myMain{
         height: auto;
         min-height: 100vh;
-        padding: 80px 2rem;
+        padding: 4rem 2rem;
 
         .myName{
             padding-bottom: 3rem;
@@ -180,7 +184,7 @@
         }
 
         .myLinks{
-            border-left: none;
+            border-right: none;
             width: 100%;
 
             h2{
@@ -199,7 +203,7 @@
     .myMain{
         height: auto;
         min-height: 100vh;
-        padding: 80px 1.5rem;
+        padding: 4rem 1.5rem;
 
         .myName{
             padding-bottom: 3rem;

@@ -3,84 +3,82 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    letter-spacing: 0.5px;
     transition: all 0.3s;
-    font-family: "IRANSansX", "Inter";
-    font-weight: 400;
+    font-family: "IRANSansX500";
 }
 
-// @font-face{
-// 	font-family: "IRANSansX100";
-// 	font-style: normal;
-// 	font-weight: 100;
-// 	src: url('../src/fonts/IRANSansX-Thin.woff') format('woff');
-// }
+@font-face{
+	font-family: "IRANSansX100";
+	font-style: normal;
+	font-weight: 100;
+	src: url('https://bayanbox.ir/download/5415560366092421432/IRANSansX-Thin.woff') format('woff');
+}
 
-// @font-face{
-// 	font-family: "IRANSansX200";
-// 	font-style: normal;
-// 	font-weight: 200;
-// 	src: url('../src/fonts/IRANSansX-UltraLight.woff') format('woff');	
-// }
+@font-face{
+	font-family: "IRANSansX200";
+	font-style: normal;
+	font-weight: 200;
+	src: url('https://bayanbox.ir/download/3241799735151926648/IRANSansX-UltraLight.woff') format('woff');	
+}
 
-// @font-face{
-// 	font-family: "IRANSansX300";
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	src: url('../src/fonts/IRANSansX-light.woff') format('woff');		 
-// }
+@font-face{
+	font-family: "IRANSansX300";
+	font-style: normal;
+	font-weight: 300;
+	src: url('https://bayanbox.ir/download/5152125753991914710/IRANSansX-Light.woff') format('woff');		 
+}
 
-// @font-face{
-//   font-family: "IRANSansX400";
-//   font-style: normal;
-//   font-weight: normal;
-//   src: url('../src/fonts/IRANSansX-regular.woff') format('woff');	
-// }
+@font-face{
+  font-family: "IRANSansX400";
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://bayanbox.ir/download/326925239823018211/IRANSansX-Regular.woff') format('woff');	
+}
 
-// @font-face{
-// 	font-family: "IRANSansX500";
-// 	font-style: normal;
-// 	font-weight: 500;
-// 	src: url('../src/fonts/IRANSansX-medium.woff') format('woff');		 
-// }
+@font-face{
+	font-family: "IRANSansX500";
+	font-style: normal;
+	font-weight: 500;
+	src: url('https://bayanbox.ir/download/86180090515009736/IRANSansX-Medium.woff') format('woff');		 
+}
 
-// @font-face{
-// 	font-family: "IRANSansX600";
-// 	font-style: normal;
-// 	font-weight: 600;
-// 	src: url('../src/fonts/IRANSansX-demibold.woff') format('woff');	 
-// }
+@font-face{
+	font-family: "IRANSansX600";
+	font-style: normal;
+	font-weight: 600;
+	src: url('https://bayanbox.ir/download/5002150865348523055/IRANSansX-DemiBold.woff') format('woff');	 
+}
 
-// @font-face{
-//   font-family: "IRANSansX700";
-//   font-style: normal;
-//   font-weight: bold;
-//   src: url('../src/fonts/IRANSansX-bold.woff') format('woff');	 
-// }
+@font-face{
+  font-family: "IRANSansX700";
+  font-style: normal;
+  font-weight: bold;
+  src: url('https://bayanbox.ir/download/4771387777500034831/IRANSansX-Bold.woff') format('woff');	 
+}
 
-// @font-face{
-// 	font-family: "IRANSansX800";
-// 	font-style: normal;
-// 	font-weight: 800;
-// 	src: url('../src/fonts/IRANSansX-extrabold.woff') format('woff');		 
-// }
+@font-face{
+	font-family: "IRANSansX800";
+	font-style: normal;
+	font-weight: 800;
+	src: url('https://bayanbox.ir/download/1596263448340612131/IRANSansX-ExtraBold.woff') format('woff');		 
+}
 
-// @font-face{
-// 	font-family: "IRANSansX900";
-// 	font-style: normal;
-// 	font-weight: 900;
-// 	src: url('../src/fonts/IRANSansX-black.woff') format('woff');		 
-// }
+@font-face{
+	font-family: "IRANSansX900";
+	font-style: normal;
+	font-weight: 900;
+	src: url('https://bayanbox.ir/download/3926753744644348942/IRANSansX-Black.woff') format('woff');		 
+}
 
 .lightMode{
   --color1: #050505;
   --color2: #757575;
-  --color3: #00c399;
+  --color3: rgba(158,0,255,1);
   --color4: #0077ff;
   --color5: #f5f7f6;
   --color6: #fff;
   --color7: #dfdfdf;
-  --color8: #0088ff;
+  --color8: rgba(255,0,35,1);
   background: var(--color5);
   direction: rtl;
 }
@@ -88,12 +86,12 @@
 .darkMode{
   --color1: #ffffff;
   --color2: #757575;
-  --color3: #00c399;
+  --color3: rgba(158,0,255,1);
   --color4: #0077ff;
   --color5: #131418;
   --color6: #222222;
   --color7: #3d3d3d;
-  --color8: #0088ff;
+  --color8: rgba(255,0,35,1);
   background: var(--color5);
   direction: rtl;
 }

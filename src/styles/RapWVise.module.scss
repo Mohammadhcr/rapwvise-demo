@@ -1,3 +1,21 @@
 .rapWVise{
-    height: 100vh;
+    padding: 4rem 5rem;
+    background: var(--color6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .rTitle{
+        padding: 5rem 0;
+
+        h1{
+            font-size: 3rem;
+            font-family: "IRANSansX900";
+            background: rgba(158,0,255,1);
+            background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
