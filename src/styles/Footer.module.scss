@@ -1,0 +1,16 @@
+footer{
+    padding: 1rem;
+    background: var(--color6);
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color2);
+
+    p{
+        font-size: 0.8rem;
+        font-family: "IRANSansX500";
+    }
+}

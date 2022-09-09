@@ -30,12 +30,14 @@
 .album{
     font-size: 4rem;
     font-family: "IRANSansX700";
+    color: var(--color1);
     padding-bottom: 0.5rem;
 }
 
 .artist{
     font-size: 2rem;
-    font-family: "IRANSansX500";
+    font-family: "IRANSansX600";
+    color: var(--color1);
 }
 
 .description{
@@ -51,13 +53,21 @@
 
     span{
         display: flex;
+        font-family: "IRANSansX400";
         line-height: 1.8rem;
     }
 
     .statick{
         color: var(--color1);
         padding-left: 5px;
+        font-family: "IRANSansX600";
     }
+}
+
+.avai{
+    font-family: "IRANSansX600";
+    color: var(--color1);
+    font-size: 1.5rem;
 }
 
 .links{
@@ -72,6 +82,7 @@
         color: var(--color1);
         padding: 0.9rem;
         text-align: center;
+        font-family: "IRANSansX400";
         margin: auto;
         font-size: 1.1rem;
         display: flex;
@@ -170,33 +181,6 @@
             width: 60%;
         }
     }
-
-    .buySection{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        flex-direction: row;
-        padding: 0.7rem 2rem;
-        justify-content: space-between;
-        border: none;
-        border-top: var(--border);
-        border-radius: 0;
-
-        .priceone{
-            font-size: 0.9rem;
-            padding: 0;
-        }
-
-        .pricetwo{
-            font-size: 1.4rem;
-            padding: 0;
-        }
-
-        .purchase, .purchased{
-            padding: 0.9rem 0;
-        }
-    }
 }
     
 @media screen and (min-width: 120px) and (max-width: 480px){
@@ -237,33 +221,6 @@
         a{
             margin: 0.9rem auto;
             width: 80%;
-        }
-    }
-
-    .buySection{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        flex-direction: row;
-        padding: 0.5rem 2rem;
-        justify-content: space-between;
-        border: none;
-        border-top: var(--border);
-        border-radius: 0;
-
-        .priceone{
-            font-size: 0.9rem;
-            padding: 0;
-        }
-
-        .pricetwo{
-            font-size: 1.4rem;
-            padding: 0;
-        }
-
-        .purchase, .purchased{
-            padding: 0.8rem 0;
         }
     }
 }

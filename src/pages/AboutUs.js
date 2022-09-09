@@ -10,7 +10,7 @@ const AboutUs = () => {
             <div className={myMain}>
                 <div className={myName}>
                     <h1>رپوایز</h1>
-                    <h3></h3>
+                    <h3>متن تستی</h3>
                 </div>
                 <div className={mySkillsContact}>
                     <div className={myLinks}>

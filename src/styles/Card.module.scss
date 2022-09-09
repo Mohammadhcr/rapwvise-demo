@@ -27,23 +27,23 @@
 }
     
 .cardTitle{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color1);
-    font-family: "IRANSansX700";
+    font-family: "IRANSansX600";
 }
     
-.cardP{
+p.cardP{
     font-size: 1.1rem;
     color: var(--color2);
-    font-family: "IRANSansX500";
+    font-family: "IRANSansX400";
 }
 
 @media screen and (min-width: 120px) and (max-width: 480px){
     .cardTitle{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     
-    .cardP{
+    p.cardP{
         font-size: 1rem;
     }
 }

@@ -22,7 +22,7 @@ const Album = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, links, artwork, avai, statick, buySection, purchase, priceone, pricetwo, purchased} = styles;
+    const {wrapper, info, album, artist, description, links, artwork, avai, statick} = styles;
 
     const data = database[params.id - 1]
     
@@ -30,8 +30,8 @@ const Album = () => {
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h1 className={album}>{data.album}</h1>
-                    <h2 className={artist}>{data.artist}</h2>
+                    <h2 className={album}>{data.album}</h2>
+                    <h3 className={artist}>{data.artist}</h3>
                     <div className={description}>
                         <div>
                             <span>
