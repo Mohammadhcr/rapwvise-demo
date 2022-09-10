@@ -3,13 +3,14 @@ import { Route, Routes } from "react-router-dom";
 
 import RapWVise from './pages/RapWVise';
 import Hamseda from './pages/Hamseda';
-import Notes from './pages/Notes';
+import Top10 from './pages/Top10';
 import Comments from './pages/Comments';
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Podcast from './pages/Podcast';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -42,11 +43,12 @@ const App = () => {
             <Route path='/hamseda' element={<Hamseda />} />
             <Route path='/hamseda/:id' element={<Podcast />} />
             <Route path='/comments' element={<Comments />} />
-            <Route path='/notes' element={<Notes />} />
+            <Route path='/top10' element={<Top10 />} />
             <Route path='/login' element={<Login />} />
             <Route path='/Signup' element={<Signup />} />
             <Route path='/aboutus' element={<AboutUs />} />
           </Routes>
+          <Footer />
         </div>
       </>
   );

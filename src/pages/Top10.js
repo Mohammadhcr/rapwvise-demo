@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../components/Card';
 
-const Hamseda = () => {
+const Top10 = () => {
     return (
         <div>
             <Card />
@@ -10,4 +10,4 @@ const Hamseda = () => {
     );
 };
 
-export default Hamseda;
+export default Top10;

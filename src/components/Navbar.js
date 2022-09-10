@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
     const [menu, setMenu] = useState(false);
 
-    const {leftSide, logoTitle, rightSide, toggle, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, toggleActive, bxMoon, bxSun, menuItems, menuUser} = styles;
+    const {leftSide, logoTitle, rightSide, toggle, userAccount, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, toggleActive, bxMoon, bxSun, menuItems, menuUser} = styles;
 
     const clickHandler = () =>{
         setMenu(!menu);
@@ -18,8 +18,8 @@ const Navbar = (props) => {
             <div className={`${menuList} ${menu ? `${menuListActive}` : ""}`}>
                 <ul className={menuItems}>
                     <Link to="/hamseda" onClick={clickHandler}><li><i className='bx bx-podcast'></i> پادکست همصدا</li></Link>
-                    <Link to="/comments" onClick={clickHandler}><li><i className='bx bx-message-dots'></i> نظرات</li></Link>
-                    <Link to="/notes" onClick={clickHandler}><li><i className='bx bx-notepad'></i> یادداشت ها</li></Link>
+                    <Link to="/top10" onClick={clickHandler}><li><i className='bx bx-notepad'></i> تاپ 10</li></Link>
+                    <Link to="/comments" onClick={clickHandler}><li><i className='bx bx-message-dots'></i> نظرات کاربران</li></Link>
                     <Link to="/aboutus" onClick={clickHandler}><li><i className='bx bx-info-circle'></i> درباره ما</li></Link>
                 </ul>
                 <ul className={menuUser}>
@@ -39,18 +39,20 @@ const Navbar = (props) => {
                             <h1>رپ وایز</h1>
                         </Link>
                     </div>
-                </div>
-                <div className={rightSide}>
                     <nav>
                         <ul>
                             <li><Link to="/hamseda"><i className='bx bx-podcast'></i> پادکست همصدا</Link></li>
-                            <li><Link to="/comments"><i className='bx bx-message-dots'></i> نظرات</Link></li>
-                            <li><Link to="/notes"><i className='bx bx-notepad'></i> یادداشت ها</Link></li>
+                            <li><Link to="/top10"><i className='bx bx-notepad'></i> تاپ 10</Link></li>
+                            <li><Link to="/comments"><i className='bx bx-message-dots'></i> نظرات کاربران</Link></li>
                             <li><Link to="/aboutus"><i className='bx bx-info-circle'></i> درباره ما</Link></li>
-                            <li><Link to="/login"><i className='bx bx-user'></i> ورود</Link></li>
-                            <li><Link to="/signup"><i className='bx bx-user-plus'></i> ثبت نام</Link></li>
                         </ul>
                     </nav>
+                </div>
+                <div className={rightSide}>
+                    <div className={userAccount}>
+                        <span><Link to="/login"><i className='bx bx-user'></i> ورود</Link></span>
+                        <span><Link to="/signup"><i className='bx bx-user-plus'></i> ثبت نام</Link></span>
+                    </div>
                     <div className={`${toggle} ${props.theme ? `${toggleActive}` : ""}`}>
                         <span onClick={props.toggle}>
                             <i className={`bx bx-moon ${bxMoon}`}></i>

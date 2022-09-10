@@ -24,21 +24,22 @@ const Album = () => {
 
     const {wrapper, info, album, artist, description, links, artwork, avai, statick} = styles;
 
-    const data = database[params.id - 1]
+    const data = database[params.id - 1];
     
     return (
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h2 className={album}>{data.album}</h2>
-                    <h3 className={artist}>{data.artist}</h3>
+                    <h2 className={album}>{data.episodeNumber}</h2>
+                    <h3 className={artist}>{data.episodeName}</h3>
                     <div className={description}>
-                        <div>
+                            <span>
+                                <span className={statick}>{data.episodeDescription}</span>
+                            </span>
                             <span>
                                 <span className={statick}>تاریخ انتشار:</span>
-                                {data.year}
+                                {data.releaseDate}
                             </span>
-                        </div>
                     </div>
                     
                     <h2 className={avai}>شنیدن پادکست:</h2>

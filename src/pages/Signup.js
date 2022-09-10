@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
 import styles from '../styles/Signup.module.scss'
@@ -6,6 +6,19 @@ import styles from '../styles/Signup.module.scss'
 const Signup = () => {
 
     const {sForm, signup, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, facebook, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
+
+    const [user, setUser] = useState({});
+
+    const createAccount = e => {
+        e.preventDefault()
+        fetch('#', {
+          method: 'POST',
+          body: JSON.stringify({ user }),
+          headers: { 'Content-Type': 'application/json' },
+        })
+          .then(res => res.json())
+          .then(json => setUser(json.user))
+      }
 
     return (
         <form className={sForm}>
@@ -16,43 +29,43 @@ const Signup = () => {
                     </div>
                     <div className={inputs}>
                         <div className={input}>
-                            <span className={placeholder}>نام کاربری:</span>
+                            <span className={placeholder}>نام:</span>
                             <div>
                                 <i className='bx bx-user'></i>
-                                <input type="text" name="username" placeholder="" />
+                                <input value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} type="text" name="username" placeholder="" />
                             </div>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>ایمیل:</span>
                             <div>
                                 <i className='bx bx-envelope'></i>
-                                <input type="email" name="email" placeholder="" />
+                                <input value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} type="email" name="email" placeholder="" />
                             </div>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>شماره موبایل:</span>
                             <div>
                                 <i className='bx bx-phone'></i>
-                                <input type="text" name="phoneNumber" placeholder="" />
+                                <input value={user.phoneNumber} onChange={e => setUser({ ...user, phoneNumber: e.target.value })} type="text" name="phoneNumber" placeholder="" />
                             </div>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>رمز عبور:</span>
                             <div>
                                 <i className='bx bx-lock-alt' ></i>
-                                <input type="password" name="password" placeholder="" />
+                                <input value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} type="password" name="password" placeholder="" />
                             </div>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>تایید رمز عبور:</span>
                             <div>
                                 <i className='bx bxs-lock-alt'></i>
-                                <input type="password" name="confirmPassword" placeholder="" />
+                                <input value={user.confirmPass} onChange={e => setUser({ ...user, confirmPass: e.target.value })} type="password" name="confirmPassword" placeholder="" />
                             </div>
                         </div>
                     </div>
                     <div className={submit}>
-                        <button type="submit"><i className='bx bx-plus'></i> ساخت حساب کاربری</button>
+                        <button type="submit" onClick={createAccount}><i className='bx bx-plus'></i> ساخت حساب کاربری</button>
                     </div>
                 </div>
                 <div className={rightSide}>
