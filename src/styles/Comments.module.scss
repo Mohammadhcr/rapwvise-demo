@@ -1,0 +1,26 @@
+.cContainer{
+    padding: 10rem 5rem 7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .commentTitle{
+        padding-bottom: 2rem;
+
+        h2{
+            font-size: 3rem;
+            font-family: "IRANSansX900";
+            background: rgb(255,72,0);
+            background: linear-gradient(135deg, rgba(255,72,0,1) 0%, rgba(255,239,0,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .commentText p{
+        color: var(--color2);
+        line-height: 1.8rem;
+    }
+}

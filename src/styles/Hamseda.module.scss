@@ -1,0 +1,26 @@
+.hContainer{
+    padding: 10rem 5rem 7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .hamsedaTitle{
+        padding-bottom: 2rem;
+
+        h2{
+            font-size: 3rem;
+            font-family: "IRANSansX900";
+            background: rgb(0,255,119);
+            background: linear-gradient(135deg, rgba(0,255,119,1) 0%, rgba(0,142,255,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .hamsedaText p{
+        color: var(--color2);
+        line-height: 1.8rem;
+    }
+}

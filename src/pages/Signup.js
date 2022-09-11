@@ -7,18 +7,43 @@ const Signup = () => {
 
     const {sForm, signup, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, facebook, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
 
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState({
+        key: "",
+        name: "",
+        email: "",
+        phoneNumber: "",
+        password: "",
+        confirmPass: "",
+    });
+
+    if(user.password.length < 8){
+        console.log("pass is weak")
+    }
+
+    if (user.confirmPass !== user.password){
+        console.log("pass not match")
+    }
 
     const createAccount = e => {
         e.preventDefault()
+
+        console.log(user)
+
         fetch('#', {
-          method: 'POST',
-          body: JSON.stringify({ user }),
-          headers: { 'Content-Type': 'application/json' },
+          method: "POST",
+          body: JSON.stringify(user)
         })
-          .then(res => res.json())
-          .then(json => setUser(json.user))
-      }
+        
+        .then(setUser({
+            name: "",
+            email: "",
+            phoneNumber: "",
+            password: "",
+            confirmPass: "",
+        }))
+
+        .then(res=>console.log(res))
+    }
 
     return (
         <form className={sForm}>
@@ -32,8 +57,9 @@ const Signup = () => {
                             <span className={placeholder}>نام:</span>
                             <div>
                                 <i className='bx bx-user'></i>
-                                <input value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} type="text" name="username" placeholder="" />
+                                <input maxLength="20" value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} type="text" name="username" placeholder="" />
                             </div>
+                            {user.name.length < 3 || user.name.length > 20 ? "لطفا نام معتبر وارد کنید" : ""}
                         </div>
                         <div className={input}>
                             <span className={placeholder}>ایمیل:</span>
@@ -41,13 +67,17 @@ const Signup = () => {
                                 <i className='bx bx-envelope'></i>
                                 <input value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} type="email" name="email" placeholder="" />
                             </div>
+                            {!user.email.includes("@") || !user.email.includes(".") || user.email.length < 7 ? "لطفا ایمیل معتبر وارد کنید" : ""}
                         </div>
                         <div className={input}>
                             <span className={placeholder}>شماره موبایل:</span>
                             <div>
                                 <i className='bx bx-phone'></i>
-                                <input value={user.phoneNumber} onChange={e => setUser({ ...user, phoneNumber: e.target.value })} type="text" name="phoneNumber" placeholder="" />
+                                <input maxLength="11" value={user.phoneNumber} onChange={e => setUser({ ...user, phoneNumber: e.target.value })} type="text" name="phoneNumber" placeholder="" />
                             </div>
+                            <span>
+                                {user.phoneNumber.length < 11 || (typeof (user.phoneNumber)) !== "string" ? "لطفا شماره تلفن معتبر وارد کنید" : ""}
+                            </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>رمز عبور:</span>
@@ -55,6 +85,9 @@ const Signup = () => {
                                 <i className='bx bx-lock-alt' ></i>
                                 <input value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} type="password" name="password" placeholder="" />
                             </div>
+                            <span>
+                                {user.password.length < 8 ? "پسورد شما ضعیف است" : ""}
+                            </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>تایید رمز عبور:</span>
@@ -62,6 +95,9 @@ const Signup = () => {
                                 <i className='bx bxs-lock-alt'></i>
                                 <input value={user.confirmPass} onChange={e => setUser({ ...user, confirmPass: e.target.value })} type="password" name="confirmPassword" placeholder="" />
                             </div>
+                            <span>
+                                {user.password !== user.confirmPass ? "رمز ها یکسان نیستند" : ""}
+                            </span>
                         </div>
                     </div>
                     <div className={submit}>

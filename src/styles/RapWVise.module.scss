@@ -1,12 +1,12 @@
 .rapWVise, .hamseda, .top10, .comments{
-    padding: 4rem 5rem;
+    padding: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
 
     .tTitle, .rTitle, .cTitle, .hTitle{
-        padding: 5rem 0;
+        padding-bottom: 2rem;
 
         h1, h2{
             font-size: 3rem;
@@ -21,6 +21,7 @@
 
     .rText, .hText, .cText, .tText{
         color: var(--color2);
+        line-height: 1.8rem;
     }
 
     .links{
@@ -30,22 +31,39 @@
 
         .link{
             display: flex;
+            width: 300px;
             border-radius: 1rem;
-            color: var(--color1);
-            background: var(--color6);
+            background: var(--color7);
             flex-direction: column;
             margin: 3rem 2rem;
+            padding: 1rem;
             align-items: center;
             justify-content: center;
+            text-align: center;
 
             .linkPhoto{
+                width: 100%;
 
+                img{
+                    width: 100%;
+                    border-radius: 0.7rem;
+                }
             }
 
             .linkContent{
 
                 h2{
-                    
+                    color: var(--color1);
+                    font-size: 1.3rem;
+                    font-family: "IRANSansX600";
+                    padding: 0.5rem 0;
+                }
+
+                p{
+                    color: var(--color2);
+                    font-size: 1rem;
+                    font-family: "IRANSansX400";
+                    padding: 0.5rem 0;
                 }
             }
         }
@@ -54,32 +72,50 @@
 
 .rapWVise{
     background: var(--color6);
-
-    // .rTitle{
-
-    // }
+    padding-top: 8rem;
 }
 
 .hamseda{
     background: var(--color5);
 
-    // .hTitle{
+    .hTitle{
 
-    // }
+        h2{
+            background: rgb(0,255,119);
+            background: linear-gradient(135deg, rgba(0,255,119,1) 0%, rgba(0,142,255,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 .comments{
     background: var(--color5);
 
-    // .cTitle{
+    .cTitle{
 
-    // }
+        h2{
+            background: rgb(255,72,0);
+            background: linear-gradient(135deg, rgba(255,72,0,1) 0%, rgba(255,239,0,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 .top10{
     background: var(--color6);
 
-    // .tTitle{
+    .tTitle{
 
-    // }
+        h2{
+            background: rgb(255,0,241);
+            background: linear-gradient(135deg, rgba(255,0,241,1) 0%, rgba(0,255,128,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }

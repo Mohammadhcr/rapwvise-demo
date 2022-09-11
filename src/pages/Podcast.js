@@ -22,7 +22,7 @@ const Album = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, links, artwork, avai, statick} = styles;
+    const {wrapper, info, album, artist, description, links, artwork, avai, statick, spotify, applePod, soundCloud} = styles;
 
     const data = database[params.id - 1];
     
@@ -44,9 +44,9 @@ const Album = () => {
                     
                     <h2 className={avai}>شنیدن پادکست:</h2>
                     <div className={links}>
-                        <a href={data.spotify} target="_blank"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
-                        <a href={data.apple} target="_blank"><i className='bx bxl-apple'></i> اپل پادکست</a>
-                        <a href={data.soundcloud} target="_blank"><i className='bx bxl-soundcloud'></i> ساندکلاد</a>
+                        <a className={spotify} href={data.spotify} target="_blank"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
+                        <a className={applePod} href={data.apple} target="_blank"><i className='bx bxl-apple'></i> اپل پادکست</a>
+                        <a className={soundCloud} href={data.soundcloud} target="_blank"><i className='bx bxl-soundcloud'></i> ساندکلاد</a>
                     </div>
                 </div>
                 <div className={artwork}>
