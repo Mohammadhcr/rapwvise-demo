@@ -1,5 +1,5 @@
 .rapWVise, .hamseda, .top10, .comments{
-    padding: 5rem;
+    padding: 5rem 10rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -117,5 +117,64 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1600px){
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+
+}
+
+@media screen and (min-width: 781px) and (max-width: 1024px){
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 780px){
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px){
+
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 5rem 2rem;
+    
+        .tTitle, .rTitle, .cTitle, .hTitle{
+            padding-bottom: 1.5rem;
+    
+            h1, h2{
+                font-size: 2.8rem;
+            }
+        }
+    
+        .links{
+    
+            .link{
+                width: auto;
+                margin: 3rem 1rem;
+                padding: 0.7rem;
+    
+                .linkPhoto{
+                    width: 150px;
+                }
+    
+                .linkContent{
+    
+                    h2{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .rapWVise{
+        padding-top: 7rem;
     }
 }
