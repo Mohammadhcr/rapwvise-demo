@@ -43,7 +43,9 @@ const App = () => {
             <Route path='/hamseda' element={<Hamseda />} />
             <Route path='/hamseda/:id' element={<Podcast />} />
             <Route path='/comments' element={<Comments />} />
+            <Route path='/comments/:id' element={<Comment />} />
             <Route path='/top10' element={<Top10 />} />
+            <Route path='/top10/:id' element={<Article />} />
             <Route path='/login' element={<Login />} />
             <Route path='/Signup' element={<Signup />} />
             <Route path='/aboutus' element={<AboutUs />} />

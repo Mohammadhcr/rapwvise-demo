@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styles from '../styles/Signup.module.scss'
+import { emailRegex, phoneNumberRegex, passwordRegex } from '../helper/regex'
+
 
 const Signup = () => {
 
-    const {sForm, signup, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, facebook, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
+    const {sForm, signup, title, inputs, submit, options, socialLoginButtons, errMsg, socialLoginButton, google, facebook, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
 
     const [user, setUser] = useState({
-        key: "",
         name: "",
         email: "",
         phoneNumber: "",
@@ -16,33 +17,31 @@ const Signup = () => {
         confirmPass: "",
     });
 
-    if(user.password.length < 8){
-        console.log("pass is weak")
-    }
-
-    if (user.confirmPass !== user.password){
-        console.log("pass not match")
-    }
+    const [error, setError] = useState({
+        eName: true,
+        eEmail: true,
+        ePhoneNumber: true,
+        ePassword: true,
+        eConfirmPass: true,
+    });
 
     const createAccount = e => {
         e.preventDefault()
 
         console.log(user)
 
-        fetch('#', {
-          method: "POST",
-          body: JSON.stringify(user)
-        })
-        
-        .then(setUser({
-            name: "",
-            email: "",
-            phoneNumber: "",
-            password: "",
-            confirmPass: "",
-        }))
-
-        .then(res=>console.log(res))
+            fetch('#', {
+                method: "POST",
+                body: JSON.stringify(user)
+            })
+              
+            .then(setUser({
+                name: "",
+                email: "",
+                phoneNumber: "",
+                password: "",
+                confirmPass: "",
+            }))
     }
 
     return (
@@ -59,7 +58,9 @@ const Signup = () => {
                                 <i className='bx bx-user'></i>
                                 <input maxLength="20" value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} type="text" name="username" placeholder="" />
                             </div>
-                            {user.name.length < 3 || user.name.length > 20 ? "لطفا نام معتبر وارد کنید" : ""}
+                            <span className={errMsg}>
+                                {user.name.length < 3 ? "لطفا نام معتبر وارد کنید" : ""}
+                            </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>ایمیل:</span>
@@ -67,7 +68,10 @@ const Signup = () => {
                                 <i className='bx bx-envelope'></i>
                                 <input value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} type="email" name="email" placeholder="" />
                             </div>
-                            {!user.email.includes("@") || !user.email.includes(".") || user.email.length < 7 ? "لطفا ایمیل معتبر وارد کنید" : ""}
+                            <span className={errMsg}>
+                                {user.email.search(emailRegex) ? "لطفا ایمیل معتبر وارد کنید" : ""}
+                                {/* {user.email.search(emailRegex) ? "" : setError({...error, eEmail: false})} */}
+                            </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>شماره موبایل:</span>
@@ -75,8 +79,9 @@ const Signup = () => {
                                 <i className='bx bx-phone'></i>
                                 <input maxLength="11" value={user.phoneNumber} onChange={e => setUser({ ...user, phoneNumber: e.target.value })} type="text" name="phoneNumber" placeholder="" />
                             </div>
-                            <span>
-                                {user.phoneNumber.length < 11 || (typeof (user.phoneNumber)) !== "string" ? "لطفا شماره تلفن معتبر وارد کنید" : ""}
+                            <span className={errMsg}>
+                                {user.phoneNumber.search(phoneNumberRegex) ? "لطفا شماره تلفن معتبر وارد کنید" : ""}
+                                {/* {user.phoneNumber.search(phoneNumberRegex) ? "" : setError({...error, ePhoneNumber: false})} */}
                             </span>
                         </div>
                         <div className={input}>
@@ -85,8 +90,9 @@ const Signup = () => {
                                 <i className='bx bx-lock-alt' ></i>
                                 <input value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} type="password" name="password" placeholder="" />
                             </div>
-                            <span>
-                                {user.password.length < 8 ? "پسورد شما ضعیف است" : ""}
+                            <span className={errMsg}>
+                                {user.password.search(passwordRegex) ? "پسورد شما ضعیف است" : ""}
+                                {/* {user.password.search(passwordRegex) ? "" : setError({...error, ePassword: false})} */}
                             </span>
                         </div>
                         <div className={input}>
@@ -95,7 +101,7 @@ const Signup = () => {
                                 <i className='bx bxs-lock-alt'></i>
                                 <input value={user.confirmPass} onChange={e => setUser({ ...user, confirmPass: e.target.value })} type="password" name="confirmPassword" placeholder="" />
                             </div>
-                            <span>
+                            <span className={errMsg}>
                                 {user.password !== user.confirmPass ? "رمز ها یکسان نیستند" : ""}
                             </span>
                         </div>

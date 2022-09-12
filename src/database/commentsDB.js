@@ -1,0 +1,42 @@
+export const commentsDB = [
+    {
+        id: 1, 
+        episodeNumber: "قسمت چهارم", 
+        episodeName: "مسئولیت هنرمند", 
+        episodeDescription: "توضیحات اپیزود", 
+        releaseDate: 2012, 
+        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+    },
+    {
+        id: 2, 
+        episodeNumber: "قسمت چهارم", 
+        episodeName: "مسئولیت هنرمند", 
+        episodeDescription: "توضیحات اپیزود", 
+        releaseDate: 2012, 
+        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+    },
+    {
+        id: 3, 
+        episodeNumber: "قسمت چهارم", 
+        episodeName: "مسئولیت هنرمند", 
+        episodeDescription: "توضیحات اپیزود", 
+        releaseDate: 2012, 
+        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+    },
+    {
+        id: 4, 
+        episodeNumber: "قسمت چهارم", 
+        episodeName: "مسئولیت هنرمند", 
+        episodeDescription: "توضیحات اپیزود", 
+        releaseDate: 2012, 
+        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+    },
+    {
+        id: 5, 
+        episodeNumber: "قسمت چهارم", 
+        episodeName: "مسئولیت هنرمند", 
+        episodeDescription: "توضیحات اپیزود", 
+        releaseDate: 2012, 
+        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+    },
+]

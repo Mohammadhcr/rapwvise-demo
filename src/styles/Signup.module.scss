@@ -50,6 +50,15 @@
             font-family: "IRANSansX500";
         }
 
+        .errMsg{
+            font-size: 12px;
+            height: 12px;
+            user-select: none;
+            color: #ff3232;
+            padding-top: 0.5rem;
+            font-family: "IRANSansX400";
+        }
+
         div{
             padding: 0.5rem;
             display: flex;

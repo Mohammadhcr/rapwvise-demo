@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import { hamsedaDB } from '../database/hamsedaDB'
+import { commentsDB } from '../database/commentsDB'
 
 import styled from 'styled-components';
 import styles from '../styles/Podcast.module.scss';
@@ -22,9 +22,9 @@ const Album = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, links, artwork, avai, statick, spotify, applePod, soundCloud} = styles;
+    const {wrapper, info, album, artist, description, artwork, statick} = styles;
 
-    const data = hamsedaDB[params.id - 1];
+    const data = commentsDB[params.id - 1];
     
     return (
         <Background>
@@ -40,13 +40,6 @@ const Album = () => {
                                 <span className={statick}>تاریخ انتشار:</span>
                                 {data.releaseDate}
                             </span>
-                    </div>
-                    
-                    <h2 className={avai}>شنیدن پادکست:</h2>
-                    <div className={links}>
-                        <a className={spotify} href={data.spotify} target="_blank"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
-                        <a className={applePod} href={data.apple} target="_blank"><i className='bx bxl-apple'></i> اپل پادکست</a>
-                        <a className={soundCloud} href={data.soundcloud} target="_blank"><i className='bx bxl-soundcloud'></i> ساندکلاد</a>
                     </div>
                 </div>
                 <div className={artwork}>
