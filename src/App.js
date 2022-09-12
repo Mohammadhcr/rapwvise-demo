@@ -5,6 +5,8 @@ import RapWVise from './pages/RapWVise';
 import Hamseda from './pages/Hamseda';
 import Top10 from './pages/Top10';
 import Comments from './pages/Comments';
+import Comment from './pages/Comment';
+import Article from './pages/Article';
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Login from './pages/Login';

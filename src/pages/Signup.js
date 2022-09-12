@@ -17,13 +17,13 @@ const Signup = () => {
         confirmPass: "",
     });
 
-    const [error, setError] = useState({
-        eName: true,
-        eEmail: true,
-        ePhoneNumber: true,
-        ePassword: true,
-        eConfirmPass: true,
-    });
+    // const [error, setError] = useState({
+    //     eName: true,
+    //     eEmail: true,
+    //     ePhoneNumber: true,
+    //     ePassword: true,
+    //     eConfirmPass: true,
+    // });
 
     const createAccount = e => {
         e.preventDefault()
