@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Top10Card from '../components/Top10Card';
+
 import styles from '../styles/Top10.module.scss';
 
 const Top10 = () => {
