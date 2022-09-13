@@ -1,5 +1,5 @@
 .tContainer{
-    padding: 10rem 5rem 7rem;
+    padding: 10rem 5rem 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,6 +21,57 @@
 
     .top10Text p{
         color: var(--color2);
+        text-align: center;
         line-height: 1.8rem;
     }
 }
+
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+    .tContainer{
+        padding: 10rem 5rem 5rem;
+    }
+    
+    }
+    
+    @media screen and (min-width: 1025px) and (max-width: 1280px){
+
+        .tContainer{
+            padding: 10rem 4rem 4rem;
+        }
+    }
+    
+    @media screen and (min-width: 781px) and (max-width: 1024px){
+    
+        .tContainer{
+            padding: 8rem 4rem 4rem;
+        }
+    }
+    
+    @media screen and (min-width: 641px) and (max-width: 780px){
+    
+        .tContainer{
+            padding: 8rem 3rem 4rem;
+        }
+    }
+    
+    @media screen and (min-width: 481px) and (max-width: 640px){
+    
+        .tContainer{
+            padding: 8rem 2rem 4rem;
+        }
+    }
+    
+    @media screen and (min-width: 120px) and (max-width: 480px){
+    
+        .tContainer{
+            padding: 8rem 1.5rem 4rem;
+        
+            .top10Title{
+                padding-bottom: 1rem;
+        
+                h2{
+                    font-size: 2.7rem;
+                }
+            }
+        }
+    }

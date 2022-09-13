@@ -9,10 +9,12 @@
 .card{
     background: var(--color6);
     width: 100%;
+    min-width: 330px;
     margin-bottom: 3rem;
     user-select: none;
     border-radius: 1rem;
     display: flex;
+    align-items: center;
     padding: 0.7rem;
 
     .cardPhoto{
@@ -53,88 +55,85 @@ p.cardP{
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1600px) {
+
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
-
 
 }
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
 
-
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){
 
+    .card{
 
-
-.card{
-
-    .cardPhoto{
-        width: 130px;
-        height: 130px;
-
-        img{
+        .cardPhoto{
             width: 130px;
+            height: 130px;
+
+            img{
+                width: 130px;
+            }
         }
     }
-}
 
 }
 
 @media screen and (min-width: 481px) and (max-width: 640px){
 
-.card{
-    margin-bottom: 2rem;
+    .card{
+        margin-bottom: 2rem;
 
-    .cardPhoto{
-        width: 120px;
-        height: 120px;
-
-        img{
+        .cardPhoto{
             width: 120px;
+            height: 120px;
+
+            img{
+                width: 120px;
+            }
         }
     }
-}
 
-.cardTitle{
-    font-size: 1.6rem;
-}
+    .cardTitle{
+        font-size: 1.6rem;
+    }
 
-p.cardSubtitle{
-    font-size: 1rem;
-}
-.cardP{
-    display: none;
-}
+    p.cardSubtitle{
+        font-size: 1rem;
+    }
+    .cardP{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 120px) and (max-width: 480px){
 
-.card{
+    .card{
 
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
 
-    .cardPhoto{
-        width: 100px;
-        height: 100px;
-
-        img{
+        .cardPhoto{
             width: 100px;
+            height: 100px;
+
+            img{
+                width: 100px;
+            }
         }
     }
-}
 
-.cardTitle{
-    font-size: 1.5rem;
-}
+    .cardTitle{
+        font-size: 1.5rem;
+    }
 
-p.cardSubtitle{
-    font-size: 1rem;
-}
+    p.cardSubtitle{
+        font-size: 1rem;
+    }
 
-.cardP{
-    display: none;
-}
+    .cardP{
+        display: none;
+    }
 }

@@ -18,7 +18,7 @@ const Navbar = (props) => {
             <div className={`${menuList} ${menu ? `${menuListActive}` : ""}`}>
                 <ul className={menuItems}>
                     <Link to="/hamseda" onClick={clickHandler}><li><i className='bx bx-podcast'></i> پادکست همصدا</li></Link>
-                    <Link to="/top10" onClick={clickHandler}><li><i className='bx bx-notepad'></i> تاپ 10</li></Link>
+                    <Link to="/top10s" onClick={clickHandler}><li><i className='bx bx-notepad'></i> تاپ 10</li></Link>
                     <Link to="/comments" onClick={clickHandler}><li><i className='bx bx-message-dots'></i> نظرات کاربران</li></Link>
                     <Link to="/aboutus" onClick={clickHandler}><li><i className='bx bx-info-circle'></i> درباره ما</li></Link>
                 </ul>
@@ -36,13 +36,13 @@ const Navbar = (props) => {
                     </div>
                     <div className={logoTitle}>
                         <Link to="/">
-                            <h1>رپ وایز</h1>
+                            <h1>رپوایز</h1>
                         </Link>
                     </div>
                     <nav>
                         <ul>
                             <li><Link to="/hamseda"><i className='bx bx-podcast'></i> پادکست همصدا</Link></li>
-                            <li><Link to="/top10"><i className='bx bx-notepad'></i> تاپ 10</Link></li>
+                            <li><Link to="/top10s"><i className='bx bx-notepad'></i> تاپ 10</Link></li>
                             <li><Link to="/comments"><i className='bx bx-message-dots'></i> نظرات کاربران</Link></li>
                             <li><Link to="/aboutus"><i className='bx bx-info-circle'></i> درباره ما</Link></li>
                         </ul>

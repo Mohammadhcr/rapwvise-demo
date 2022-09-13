@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 import styles from '../styles/RapWVise.module.scss';
-import database from '../components/database';
 
 const RapWVise = () => {
 
-    const {rapWVise, rTitle, rText, hamseda, hTitle, hText, links, comments, cTitle, cText, top10, tTitle, tText, link, linkContent, linkPhoto} = styles;
+    const {rapWVise, rTitle, rText, hamseda, hTitle, hText, linkIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
 
     return (
         <>
             <div className={rapWVise}>
                 <div className={rTitle}>
-                    <h1>وبسایت رسمی رپوایز</h1>
+                    <h1>وبسایت رپوایز</h1>
                 </div>
                 <div className={rText}>
-                    <p>وبسایت رسمی رپوایز وبسایت رسمی رپوایز وبسایت رسمی رپوایز</p>
+                    <p>وبسایت نقد و بررسی آثار رپ فارسی</p>
                 </div>
             </div>
             <div className={hamseda}>
@@ -24,35 +25,16 @@ const RapWVise = () => {
                 <div className={hText}>
                     <p>همصدا يک پادكست موضوع محوره كه از ديد مخاطب ها، مسائل مختلف در حوزه‌ى رپ فارسى رو بررسى می كنه</p>
                 </div>
-                <div className={links}>
+                <Link to='/hamseda'>
                     <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
+                        <div className={linkIcon}>
+                            <i className='bx bx-podcast'></i>
                         </div>
                         <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
+                            <h2>شنیدن پادکست</h2>
                         </div>
                     </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                </div>
+                </Link>
             </div>
             <div className={top10}>
                 <div className={tTitle}>
@@ -61,36 +43,16 @@ const RapWVise = () => {
                 <div className={tText}>
                     <p>مقاله و لیست برترین های رپ فارسی</p>
                 </div>
-                <div className={links}>
+                <Link to='/top10s'>
                     <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
+                        <div className={linkIcon}>
+                            <i className='bx bx-notepad'></i>
                         </div>
                         <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
+                            <h2>مشاهده مقالات</h2>
                         </div>
                     </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا
-                            </h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                </div>
+                </Link>
             </div>
             <div className={comments}>
                 <div className={cTitle}>
@@ -99,36 +61,18 @@ const RapWVise = () => {
                 <div className={cText}>
                     <p>در این بخش نظرات کاربران رپ وایز رو راجع به موسیقی رپ منعکس می کنیم</p>
                 </div>
-                <div className={links}>
+                <Link to='/comments'>
                     <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
+                        <div className={linkIcon}>
+                            <i className='bx bx-message-dots'></i>
                         </div>
                         <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
+                            <h2>از نظرات بقیه کاربران مطلع شوید</h2>
                         </div>
                     </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                    <div className={link}>
-                        <div className={linkPhoto}>
-                            <img src={database[0].artwork} alt='Example' />
-                        </div>
-                        <div className={linkContent}>
-                            <h2>جوابگوی سوالات پیوسته اهل دنیا</h2>
-                            <p>جوابگوی سوالات پیوسته اهل دنیا</p>
-                        </div>
-                    </div>
-                </div>
+                </Link>
             </div>
+            <Footer />
         </>
     );
 };

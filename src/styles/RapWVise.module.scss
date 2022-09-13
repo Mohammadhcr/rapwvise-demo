@@ -6,11 +6,12 @@
     justify-content: space-between;
 
     .tTitle, .rTitle, .cTitle, .hTitle{
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
 
         h1, h2{
             font-size: 3rem;
             font-family: "IRANSansX900";
+            text-align: center;
             background: rgba(158,0,255,1);
             background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
             background-clip: text;
@@ -21,13 +22,10 @@
 
     .rText, .hText, .cText, .tText{
         color: var(--color2);
+        text-align: center;
         line-height: 1.8rem;
+        padding-bottom: 3rem;
     }
-
-    .links{
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         .link{
             display: flex;
@@ -35,18 +33,17 @@
             border-radius: 1rem;
             background: var(--color7);
             flex-direction: column;
-            margin: 3rem 2rem;
             padding: 1rem;
             align-items: center;
             justify-content: center;
             text-align: center;
 
-            .linkPhoto{
+            .linkIcon{
                 width: 100%;
 
-                img{
-                    width: 100%;
-                    border-radius: 0.7rem;
+                i{
+                    font-size: 4rem;
+                    color: var(--color1);
                 }
             }
 
@@ -58,16 +55,8 @@
                     font-family: "IRANSansX600";
                     padding: 0.5rem 0;
                 }
-
-                p{
-                    color: var(--color2);
-                    font-size: 1rem;
-                    font-family: "IRANSansX400";
-                    padding: 0.5rem 0;
-                }
             }
         }
-    }
 }
 
 .rapWVise{
@@ -143,10 +132,10 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
     
         .tTitle, .rTitle, .cTitle, .hTitle{
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
     
             h1, h2{
                 font-size: 2.8rem;

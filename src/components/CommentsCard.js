@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styles from '../styles/Card.module.scss'
 import { commentsDB } from '../database/commentsDB';
@@ -18,9 +18,8 @@ const CommentsCard = (props) => {
                                 <img src={comment.artwork} alt="Artwork" />
                             </div>
                             <div className={cardContent}>
-                                <h2 className={cardTitle}>{comment.episodeNumber}</h2>
-                                <p className={cardSubtitle}>{comment.episodeName}</p>
-                                <p className={cardP}>{comment.episodeDescription}</p>
+                                <h2 className={cardTitle}>{comment.commentNumber}</h2>
+                                <p className={cardSubtitle}>{comment.commentSubject} از {comment.commentSubtitle}</p>
                             </div>
                         </div>
                     </Link>

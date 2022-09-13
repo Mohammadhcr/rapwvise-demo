@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import RapWVise from './pages/RapWVise';
 import Hamseda from './pages/Hamseda';
-import Top10 from './pages/Top10';
+import Top10s from './pages/Top10s';
 import Comments from './pages/Comments';
 import Comment from './pages/Comment';
 import Article from './pages/Article';
@@ -46,13 +46,12 @@ const App = () => {
             <Route path='/hamseda/:id' element={<Podcast />} />
             <Route path='/comments' element={<Comments />} />
             <Route path='/comments/:id' element={<Comment />} />
-            <Route path='/top10' element={<Top10 />} />
-            <Route path='/top10/:id' element={<Article />} />
+            <Route path='/top10s' element={<Top10s />} />
+            <Route path='/top10s/:id' element={<Article />} />
             <Route path='/login' element={<Login />} />
             <Route path='/Signup' element={<Signup />} />
             <Route path='/aboutus' element={<AboutUs />} />
           </Routes>
-          <Footer />
         </div>
       </>
   );

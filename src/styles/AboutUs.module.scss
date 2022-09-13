@@ -1,20 +1,21 @@
 @import "root";
 
 .myMain{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 10rem 0;
+    padding: 4rem 10rem;
 
     .myName{
         padding-bottom: 5rem;
-        border-bottom:2px solid var(--color7);
+        border-bottom: 2px solid var(--color7);
         text-align: center;
 
         h1{
             color: var(--color1);
             font-size: 6rem;
+            padding-top: 2rem;
             font-family: "IRANSansX900";
         }
 
@@ -72,13 +73,13 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
     .myMain{
-        padding: 4rem 8rem 0;
+        padding: 4rem 8rem;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .myMain{
-        padding: 4rem 6rem 0;
+        padding: 4rem 6rem;
 
         .myLinks{
             width: 80%;
@@ -92,7 +93,7 @@
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .myMain{
-        padding: 4rem 4rem 0;
+        padding: 4rem 4rem;
     
         .myName{
             padding-bottom: 4rem;
@@ -127,7 +128,7 @@
     .myMain{
         height: auto;
         min-height: 100vh;
-        padding: 4rem 3rem 0;
+        padding: 4rem 3rem;
 
         .myName{
             padding-bottom: 3rem;

@@ -18,11 +18,11 @@ const Background = styled.div`
         }
     `;
 
-const Album = () => {
+const Article = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, artwork, statick} = styles;
+    const {wrapper, info, album, description, artwork, statick} = styles;
 
     const data = top10DB[params.id - 1];
     
@@ -30,16 +30,12 @@ const Album = () => {
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h2 className={album}>{data.episodeNumber}</h2>
-                    <h3 className={artist}>{data.episodeName}</h3>
+                    <h2 className={album}>{data.articleSubject}</h2>
                     <div className={description}>
-                            <span>
-                                <span className={statick}>{data.episodeDescription}</span>
-                            </span>
-                            <span>
-                                <span className={statick}>تاریخ انتشار:</span>
-                                {data.releaseDate}
-                            </span>
+                        <span>
+                            <span className={statick}>تاریخ انتشار:</span>
+                            {data.releaseDate}
+                        </span>
                     </div>
                 </div>
                 <div className={artwork}>
@@ -50,4 +46,4 @@ const Album = () => {
     );
 };
 
-export default Album;
+export default Article;

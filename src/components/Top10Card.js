@@ -18,9 +18,7 @@ const Top10Card = (props) => {
                                 <img src={article.artwork} alt="Artwork" />
                             </div>
                             <div className={cardContent}>
-                                <h2 className={cardTitle}>{article.episodeNumber}</h2>
-                                <p className={cardSubtitle}>{article.episodeName}</p>
-                                <p className={cardP}>{article.episodeDescription}</p>
+                                <h2 className={cardTitle}>{article.articleSubject}</h2>
                             </div>
                         </div>
                     </Link>

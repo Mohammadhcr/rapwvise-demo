@@ -18,7 +18,7 @@ const Background = styled.div`
         }
     `;
 
-const Album = () => {
+const Comment = () => {
 
     const params = useParams();
 
@@ -30,12 +30,9 @@ const Album = () => {
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h2 className={album}>{data.episodeNumber}</h2>
-                    <h3 className={artist}>{data.episodeName}</h3>
+                    <h2 className={album}>{data.commentNumber}</h2>
+                    <h3 className={artist}>{data.commentSubject} از {data.commentSubtitle}</h3>
                     <div className={description}>
-                            <span>
-                                <span className={statick}>{data.episodeDescription}</span>
-                            </span>
                             <span>
                                 <span className={statick}>تاریخ انتشار:</span>
                                 {data.releaseDate}
@@ -50,4 +47,4 @@ const Album = () => {
     );
 };
 
-export default Album;
+export default Comment;

@@ -18,7 +18,7 @@ const Background = styled.div`
         }
     `;
 
-const Album = () => {
+const Podcast = () => {
 
     const params = useParams();
 
@@ -57,4 +57,4 @@ const Album = () => {
     );
 };
 
-export default Album;
+export default Podcast;

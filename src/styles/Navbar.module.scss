@@ -288,6 +288,18 @@ nav{
     header{
         padding: 0 2rem;
     }
+
+    .hamburgerMenu{
+        display: block;
+    }
+
+    .menuList{
+        display: flex;
+    }
+    
+    nav, .rightSide .userAccount span:first-child a, .rightSide .userAccount span:last-child a{
+        display: none;
+    }
 }
     
 @media screen and (min-width: 641px) and (max-width: 780px){
