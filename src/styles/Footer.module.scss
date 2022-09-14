@@ -12,5 +12,24 @@ footer{
     p{
         font-size: 0.8rem;
         font-family: "IRANSansX500";
+
+        a{
+            background: rgba(158,0,255,1);
+            background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: "IRANSansX600";
+            font-size: 0.9rem;
+            -webkit-text-fill-color: transparent;
+        }
     }
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+    
+    .copyright{
+        flex-direction: column;
+        line-height: 1.8rem;
+    }
+
 }

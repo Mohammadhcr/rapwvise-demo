@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from '../styles/Signup.module.scss'
-import { emailRegex, phoneNumberRegex, passwordRegex } from '../helper/regex'
-
+import { validateUser } from '../helper/validateUser';
 
 const Signup = () => {
 
@@ -12,36 +11,29 @@ const Signup = () => {
     const [user, setUser] = useState({
         name: "",
         email: "",
-        phoneNumber: "",
         password: "",
         confirmPass: "",
     });
 
-    // const [error, setError] = useState({
-    //     eName: true,
-    //     eEmail: true,
-    //     ePhoneNumber: true,
-    //     ePassword: true,
-    //     eConfirmPass: true,
-    // });
+    const [error, setError] = useState({});
 
-    const createAccount = e => {
+    const changeHandler = (e) => {
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    const signupAuthentication = (e) => {
+
         e.preventDefault()
+        setError(validateUser(user))
 
-        console.log(user)
-
-            fetch('#', {
-                method: "POST",
-                body: JSON.stringify(user)
-            })
-              
-            .then(setUser({
+        if(!Object.keys(error).length){
+            setUser({
                 name: "",
                 email: "",
-                phoneNumber: "",
                 password: "",
                 confirmPass: "",
-            }))
+            })
+        }
     }
 
     return (
@@ -56,65 +48,51 @@ const Signup = () => {
                             <span className={placeholder}>نام:</span>
                             <div>
                                 <i className='bx bx-user'></i>
-                                <input maxLength="20" value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} type="text" name="username" placeholder="" />
+                                <input maxLength="20" value={user.name} onChange={changeHandler} type="text" name="name" placeholder="" />
                             </div>
                             <span className={errMsg}>
-                                {user.name.length < 3 ? "لطفا نام معتبر وارد کنید" : ""}
+                                {error.name && error.name}
                             </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>ایمیل:</span>
                             <div>
                                 <i className='bx bx-envelope'></i>
-                                <input value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} type="email" name="email" placeholder="" />
+                                <input value={user.email} onChange={changeHandler} type="email" name="email" placeholder="" />
                             </div>
                             <span className={errMsg}>
-                                {user.email.search(emailRegex) ? "لطفا ایمیل معتبر وارد کنید" : ""}
-                                {/* {user.email.search(emailRegex) ? "" : setError({...error, eEmail: false})} */}
-                            </span>
-                        </div>
-                        <div className={input}>
-                            <span className={placeholder}>شماره موبایل:</span>
-                            <div>
-                                <i className='bx bx-phone'></i>
-                                <input maxLength="11" value={user.phoneNumber} onChange={e => setUser({ ...user, phoneNumber: e.target.value })} type="text" name="phoneNumber" placeholder="" />
-                            </div>
-                            <span className={errMsg}>
-                                {user.phoneNumber.search(phoneNumberRegex) ? "لطفا شماره تلفن معتبر وارد کنید" : ""}
-                                {/* {user.phoneNumber.search(phoneNumberRegex) ? "" : setError({...error, ePhoneNumber: false})} */}
+                            {error.email && error.email}
                             </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>رمز عبور:</span>
                             <div>
                                 <i className='bx bx-lock-alt' ></i>
-                                <input value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} type="password" name="password" placeholder="" />
+                                <input value={user.password} onChange={changeHandler} type="password" name="password" placeholder="" />
                             </div>
                             <span className={errMsg}>
-                                {user.password.search(passwordRegex) ? "پسورد شما ضعیف است" : ""}
-                                {/* {user.password.search(passwordRegex) ? "" : setError({...error, ePassword: false})} */}
+                            {error.password && error.password}
                             </span>
                         </div>
                         <div className={input}>
                             <span className={placeholder}>تایید رمز عبور:</span>
                             <div>
                                 <i className='bx bxs-lock-alt'></i>
-                                <input value={user.confirmPass} onChange={e => setUser({ ...user, confirmPass: e.target.value })} type="password" name="confirmPassword" placeholder="" />
+                                <input value={user.confirmPass} onChange={changeHandler} type="password" name="confirmPass" placeholder="" />
                             </div>
                             <span className={errMsg}>
-                                {user.password !== user.confirmPass ? "رمز ها یکسان نیستند" : ""}
+                            {error.confirmPass && error.confirmPass}
                             </span>
                         </div>
                     </div>
                     <div className={submit}>
-                        <button type="submit" onClick={createAccount}><i className='bx bx-plus'></i> ساخت حساب کاربری</button>
+                        <button type="submit" onClick={signupAuthentication}><i className='bx bx-plus'></i> ساخت حساب کاربری</button>
                     </div>
                 </div>
                 <div className={rightSide}>
                     <div className={socialLoginButtons}>
                         <button className={`${socialLoginButton} ${google}`}><i className={`bx bxl-google ${bxl}`}></i> ثبت نام با گوگل</button>
                         <button className={`${socialLoginButton} ${apple}`}><i className={`bx bxl-apple ${bxl}`}></i> ثبت نام با اپل</button>
-                        <button className={`${socialLoginButton} ${facebook}`}><i className={`bx bxl-facebook ${bxl}`}></i> ثبت نام با فیس بوک</button>
                     </div>
                     <div className={options}>
                         <p>قبلا ثبت نام کردید؟ <Link to="/login">ورود</Link></p>

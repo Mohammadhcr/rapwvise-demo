@@ -6,7 +6,7 @@ import styles from '../styles/RapWVise.module.scss';
 
 const RapWVise = () => {
 
-    const {rapWVise, rTitle, rText, hamseda, hTitle, hText, linkIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
+    const {rapWVise, rTitle, rText, hamseda, hTitle, hText, linkIcon, absoIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
 
     return (
         <>
@@ -28,6 +28,7 @@ const RapWVise = () => {
                 <Link to='/hamseda'>
                     <div className={link}>
                         <div className={linkIcon}>
+                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-podcast'></i>
                         </div>
                         <div className={linkContent}>
@@ -38,18 +39,19 @@ const RapWVise = () => {
             </div>
             <div className={top10}>
                 <div className={tTitle}>
-                    <h2>تاپ 10</h2>
+                    <h2>مقالات و بررسی ها</h2>
                 </div>
                 <div className={tText}>
-                    <p>مقاله و لیست برترین های رپ فارسی</p>
+                    <p>بررسی آثار، مقالات و لیست برترین های رپ فارسی</p>
                 </div>
-                <Link to='/top10s'>
+                <Link to='/articles'>
                     <div className={link}>
                         <div className={linkIcon}>
+                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-notepad'></i>
                         </div>
                         <div className={linkContent}>
-                            <h2>مشاهده مقالات</h2>
+                            <h2>مشاهده مطالب</h2>
                         </div>
                     </div>
                 </Link>
@@ -64,6 +66,7 @@ const RapWVise = () => {
                 <Link to='/comments'>
                     <div className={link}>
                         <div className={linkIcon}>
+                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-message-dots'></i>
                         </div>
                         <div className={linkContent}>

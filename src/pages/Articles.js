@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Top10Card from '../components/Top10Card';
+import ArticleCard from '../components/ArticleCard';
 import Footer from '../components/Footer';
-import styles from '../styles/Top10.module.scss';
+import styles from '../styles/Articles.module.scss';
 
 const Top10s = () => {
 
@@ -12,12 +12,12 @@ const Top10s = () => {
         <>
             <div className={tContainer}>
                 <div className={top10Title}>
-                        <h2>تاپ 10</h2>
+                        <h2>مقالات و بررسی ها</h2>
                     </div>
                     <div className={top10Text}>
-                        <p>مقاله و لیست برترین های رپ فارسی</p>
+                        <p>بررسی آثار، مقالات و لیست برترین های رپ فارسی</p>
                     </div>
-                <Top10Card />
+                <ArticleCard />
             </div>
             <Footer />
         </>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CommentsCard from '../components/CommentsCard';
+import CommentCard from '../components/CommentCard';
 import styles from '../styles/Comments.module.scss';
 import Footer from '../components/Footer';
 
@@ -17,7 +17,7 @@ const Comments = () => {
                     <div className={commentText}>
                         <p>در این بخش نظرات کاربران رپ وایز رو راجع به موسیقی رپ منعکس می کنیم</p>
                     </div>
-                <CommentsCard />
+                <CommentCard />
             </div>
             <Footer />
         </>

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import RapWVise from './pages/RapWVise';
 import Hamseda from './pages/Hamseda';
-import Top10s from './pages/Top10s';
+import Articles from './pages/Articles';
 import Comments from './pages/Comments';
 import Comment from './pages/Comment';
 import Article from './pages/Article';
@@ -12,7 +12,6 @@ import AboutUs from "./pages/AboutUs";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Podcast from './pages/Podcast';
-import Footer from './components/Footer';
 
 const App = () => {
 
@@ -46,8 +45,8 @@ const App = () => {
             <Route path='/hamseda/:id' element={<Podcast />} />
             <Route path='/comments' element={<Comments />} />
             <Route path='/comments/:id' element={<Comment />} />
-            <Route path='/top10s' element={<Top10s />} />
-            <Route path='/top10s/:id' element={<Article />} />
+            <Route path='/articles' element={<Articles />} />
+            <Route path='/articles/:id' element={<Article />} />
             <Route path='/login' element={<Login />} />
             <Route path='/Signup' element={<Signup />} />
             <Route path='/aboutus' element={<AboutUs />} />

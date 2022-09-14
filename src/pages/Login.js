@@ -57,7 +57,6 @@ const Login = () => {
                 <div className={socialLoginButtons}>
                     <button className={`${socialLoginButton} ${google}`}><i className={`bx bxl-google ${bxl}`}></i> ورود با گوگل</button>
                     <button className={`${socialLoginButton} ${apple}`}><i className={`bx bxl-apple ${bxl}`}></i> ورود با اپل</button>
-                    <button className={`${socialLoginButton} ${facebook}`}><i className={`bx bxl-facebook ${bxl}`}></i> ورود با فیس بوک</button>
                 </div>
             </div>
         </form>

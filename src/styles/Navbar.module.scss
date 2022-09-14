@@ -157,9 +157,9 @@ nav{
 
 .hamburgerMenu{
     display: none;
-    width: 24px;
-    margin-left: 1.5rem;
-    height: auto;
+    width: 30px;
+    height: 30px;
+    margin-left: 1.2rem;
     z-index: 30;
     cursor: pointer;
     user-select: none;
@@ -167,10 +167,10 @@ nav{
     span {
         display: block;
         border-radius: 0.7rem;
-        width: 100%;
+        width: 24px;
         height: 2px;
         background: var(--color2);
-        margin: 5px 0;
+        margin: 6px auto;
         -webkit-transition: all 0.25s;
         transition: transform 0.25s;
 
@@ -203,7 +203,7 @@ nav{
         }
         
         &:nth-child(3){
-            transform: rotate(46deg) translate(-5px, -4px);
+            transform: rotate(46deg) translate(-6px, -5px);
         }
     }
 }
@@ -348,7 +348,7 @@ nav{
     
 @media screen and (min-width: 120px) and (max-width: 480px){
     header{
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
     
     .hamburgerMenu{

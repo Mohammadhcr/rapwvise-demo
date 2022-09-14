@@ -4,16 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     width: 100%;
     min-height: 100vh;
-    padding: 80px 5rem 0;
+    padding: 4rem 25% 0;
     user-select: none;
 }
 
 .artwork{
-    width: 40%;
+    width: 80%;
     height: auto;
+    padding: 4rem 0 2rem;
     
     img{
     width: 100%;
@@ -23,7 +24,7 @@
 }
 
 .info{
-    width: 50%;
+    width: 100%;
     color: var(--color1);
 }
 
@@ -61,6 +62,32 @@
         color: var(--color1);
         padding-left: 5px;
         font-family: "IRANSansX600";
+    }
+}
+
+.comment{
+    height: auto;
+    width: 100%;
+    padding: 1.5rem 1.5rem 3rem;
+    background: var(--color6);
+    border-radius: 2rem 2rem 0;
+    line-height: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+    i{
+        position: absolute;
+        bottom: -5px;
+        right: -1.3rem;
+        font-size: 3.2rem;
+        transform: rotate(20deg);
+        color: var(--color6);
+    }
+
+    .commentParagraph{
+        color: var(--color1);
+        font-family: "IRANSansX400";
+        font-size: 1rem;
     }
 }
 
@@ -128,19 +155,19 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
     .wrapper{
-        padding: 4rem 4rem 0;
+        padding: 4rem 20% 0;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .wrapper{
-        padding: 4rem 3rem 0;
+        padding: 4rem 20% 0;
     }
 }
    
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .wrapper{
-        padding: 4rem 2rem 0;
+        padding: 4rem 15% 0;
     }
 }
     
@@ -152,7 +179,7 @@
 
     .artwork{
         width: 100%;
-        padding: 4rem 0;
+        padding: 4rem 0 2rem;
     }
 
     .info{
@@ -182,7 +209,7 @@
 
     .artwork{
         width: 100%;
-        padding: 3rem 0;
+        padding: 3rem 0 2rem;
     }
 
     .info{
@@ -216,12 +243,12 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 2rem 0;
+        padding: 4rem 1.8rem 0;
     }
 
     .artwork{
         width: 100%;
-        padding: 2rem 0;
+        padding: 2rem 0 1rem;
     }
 
     .info{

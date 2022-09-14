@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from '../styles/Card.module.scss'
-import { commentsDB } from '../database/commentsDB';
+import { commentDB } from '../database/commentDB';
 
-const CommentsCard = (props) => {
+const CommentCard = (props) => {
 
     const {card, cardPhoto, cardContent, cardTitle, cardSubtitle, cardP, cards} = styles;
 
     return (
         <>
             <div className={cards}>
-                {commentsDB.map(comment =>
+                {commentDB.map(comment =>
                     <Link to={`/comments/${comment.id}`}>
                         <div className={card}>
                             <div className={cardPhoto}>
@@ -30,4 +30,4 @@ const CommentsCard = (props) => {
     
 };
 
-export default CommentsCard;
+export default CommentCard;

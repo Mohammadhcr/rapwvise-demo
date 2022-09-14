@@ -2,17 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import styles from '../styles/Card.module.scss'
-import { top10DB } from '../database/top10DB';
+import { articleDB } from '../database/articleDB';
 
-const Top10Card = (props) => {
+const ArticleCard = (props) => {
 
-    const {card, cardPhoto, cardContent, cardTitle, cardSubtitle, cardP, cards} = styles;
+    const {card, cardPhoto, cardContent, cardTitle, cards} = styles;
 
     return (
         <>
             <div className={cards}>
-                {top10DB.map(article =>
-                    <Link to={`/top10s/${article.id}`}>
+                {articleDB.map(article =>
+                    <Link to={`/articles/${article.id}`}>
                         <div className={card}>
                             <div className={cardPhoto}>
                                 <img src={article.artwork} alt="Artwork" />
@@ -29,4 +29,4 @@ const Top10Card = (props) => {
     
 };
 
-export default Top10Card;
+export default ArticleCard;

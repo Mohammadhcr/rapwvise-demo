@@ -11,10 +11,12 @@ const Footer = () => {
             <footer>
                 <div className={copyright}>
                     <span>
-                        <p>کپی رایت 1399 - 1401 | تمامی حقوق برای وبسایت رپوایز محفوظ است</p>
+                        <p>
+                            <i className='bx bx-copyright'></i> کپی رایت - تمامی حقوق برای وبسایت رپوایز محفوظ است.
+                        </p>
                     </span>
                     <span>
-                        <p>ساخته شده توسط: محمد اچ سی آر</p>
+                        <p>ساخته شده توسط: <a href='https://mohammadhcr.ir' target='_blank'>Mohammad hcr</a></p>
                     </span>
                 </div>
             </footer>

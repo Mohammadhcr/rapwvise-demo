@@ -4,13 +4,16 @@
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+
+    a{
+        margin-bottom: 3rem;
+    }
 }
 
 .card{
     background: var(--color6);
     width: 100%;
     min-width: 330px;
-    margin-bottom: 3rem;
     user-select: none;
     border-radius: 1rem;
     display: flex;
@@ -36,7 +39,7 @@
 }
     
 .cardTitle{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--color1);
     font-family: "IRANSansX600";
 }
@@ -44,14 +47,14 @@
 p.cardSubtitle{
     font-size: 1.1rem;
     color: var(--color2);
-    font-family: "IRANSansX400";
+    font-family: "IRANSansX500";
     padding-bottom: 1rem;
 }
     
 p.cardP{
     font-size: 1rem;
-    color: var(--color1);
-    font-family: "IRANSansX300";
+    color: #777;
+    font-family: "IRANSansX400";
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1600px) {

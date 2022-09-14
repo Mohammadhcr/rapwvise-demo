@@ -29,6 +29,7 @@
 
         .link{
             display: flex;
+            position: relative;
             width: 300px;
             border-radius: 1rem;
             background: var(--color7);
@@ -44,6 +45,14 @@
                 i{
                     font-size: 4rem;
                     color: var(--color1);
+                }
+
+                .absoIcon{
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    font-size: 1.5rem;
+                    color: #777;
                 }
             }
 

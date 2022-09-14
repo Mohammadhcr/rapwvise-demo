@@ -6,7 +6,7 @@ import { hamsedaDB } from '../database/hamsedaDB';
 
 const HamsedaCard = (props) => {
 
-    const {card, cardPhoto, cardContent, cardTitle, cardSubtitle, cardP, cards} = styles;
+    const {card, cardPhoto, cardContent, cardTitle, cardP, cards} = styles;
 
     return (
         <>
@@ -18,8 +18,7 @@ const HamsedaCard = (props) => {
                                 <img src={podcast.artwork} alt="Artwork" />
                             </div>
                             <div className={cardContent}>
-                                <h2 className={cardTitle}>{podcast.episodeNumber}</h2>
-                                <p className={cardSubtitle}>{podcast.episodeName}</p>
+                                <h2 className={cardTitle}>{podcast.episodeNumber}: {podcast.episodeName}</h2>
                                 <p className={cardP}>{podcast.episodeDescription}</p>
                             </div>
                         </div>

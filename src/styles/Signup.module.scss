@@ -13,7 +13,7 @@
 .title h1{
     text-align: center;
     cursor: default;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     user-select: none;
     background: rgba(158,0,255,1);
     background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
@@ -182,13 +182,13 @@
     }
 
     .title h1{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .signup{
         width: 100%;
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
         border: none;
     }
     
