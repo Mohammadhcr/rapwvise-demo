@@ -18,7 +18,7 @@ const Navbar = (props) => {
             <div className={`${menuList} ${menu ? `${menuListActive}` : ""}`}>
                 <ul className={menuItems}>
                     <Link to="/hamseda" onClick={clickHandler}><li><i className='bx bx-podcast'></i> پادکست همصدا</li></Link>
-                    <Link to="/articles" onClick={clickHandler}><li><i className='bx bx-notepad'></i> مقالات بررسی ها</li></Link>
+                    <Link to="/articles" onClick={clickHandler}><li><i className='bx bx-notepad'></i> مقالات و بررسی ها</li></Link>
                     <Link to="/comments" onClick={clickHandler}><li><i className='bx bx-message-dots'></i> نظرات کاربران</li></Link>
                     <Link to="/aboutus" onClick={clickHandler}><li><i className='bx bx-info-circle'></i> درباره ما</li></Link>
                 </ul>

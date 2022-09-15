@@ -12,17 +12,13 @@ const Background = styled.div`
         background: var(--bodyBack);
         letter-spacing: 0.5px;
         transition: all 0.3s;
-
-        @media screen and (min-width: 120px) and (max-width: 780px){
-            height: auto;
-        }
     `;
 
 const Podcast = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, links, artwork, avai, statick, spotify, applePod, soundCloud} = styles;
+    const {wrapper, info, album, artist, description, links, artwork, avai, statick, episodeDesc, podcastInfo, spotify, applePod, soundCloud} = styles;
 
     const data = hamsedaDB[params.id - 1];
     
@@ -30,16 +26,16 @@ const Podcast = () => {
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h2 className={album}>{data.episodeNumber}</h2>
-                    <h3 className={artist}>{data.episodeName}</h3>
+                    <div className={podcastInfo}>
+                        <h2 className={album}>{data.episodeNumber}</h2>
+                        <h3 className={artist}>{data.episodeName}</h3>
+                        <p className={episodeDesc}>{data.episodeDescription}</p>
+                    </div>
                     <div className={description}>
-                            <span>
-                                <span className={statick}>{data.episodeDescription}</span>
-                            </span>
-                            <span>
-                                <span className={statick}>تاریخ انتشار:</span>
-                                {data.releaseDate}
-                            </span>
+                        <span>
+                            <span className={statick}>تاریخ انتشار:</span>
+                            {data.releaseDate}
+                        </span>
                     </div>
                     
                     <h2 className={avai}>شنیدن پادکست:</h2>

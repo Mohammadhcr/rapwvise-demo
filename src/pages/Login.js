@@ -12,18 +12,8 @@ const Login = () => {
         password: "",
     });
 
-    const loginAccount = e => {
-        e.preventDefault()
-
-            fetch('#', {
-                method: "POST",
-                body: JSON.stringify(user)
-            })
-              
-            .then(setUser({
-                email: "",
-                password: "",
-            }))
+    const changeHandler = (e) => {
+        setUser({...user, [e.target.name]: e.target.value})
     }
 
     return (
@@ -37,19 +27,19 @@ const Login = () => {
                         <span className={placeholder}>ایمیل:</span>
                         <div>
                             <i className='bx bx-user'></i>
-                            <input type="email" name="email" value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} placeholder="" />
+                            <input type="email" name="email" value={user.email} onChange={changeHandler} />
                         </div>
                     </div>
                     <div className={input}>
                         <span className={placeholder}>رمز عبور:</span>
                         <div>
                             <i className='bx bx-lock-alt'></i>
-                            <input type="password" name="password" value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} placeholder="" />
+                            <input type="password" name="password" value={user.password} onChange={changeHandler} />
                         </div>
                     </div>
                 </div>
                 <div className={submit}>
-                    <button type="submit" onClick={loginAccount}><i className={`bx bx-log-in-circle ${bxlLog}`}></i> ورود به حساب</button>
+                    <button type="submit"><i className={`bx bx-log-in-circle ${bxlLog}`}></i> ورود به حساب</button>
                 </div>
                 <div className={options}>
                     <p>حساب کاربری ندارید؟ <Link to="/signup">ثبت نام</Link></p>

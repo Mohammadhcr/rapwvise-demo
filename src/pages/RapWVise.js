@@ -28,7 +28,7 @@ const RapWVise = () => {
                 <Link to='/hamseda'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-podcast'></i>
                         </div>
                         <div className={linkContent}>
@@ -47,7 +47,7 @@ const RapWVise = () => {
                 <Link to='/articles'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-notepad'></i>
                         </div>
                         <div className={linkContent}>
@@ -66,7 +66,7 @@ const RapWVise = () => {
                 <Link to='/comments'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i class={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
                             <i className='bx bx-message-dots'></i>
                         </div>
                         <div className={linkContent}>

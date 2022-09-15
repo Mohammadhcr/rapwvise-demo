@@ -8,15 +8,15 @@ export const validateUser = (data) => {
         delete errors.name
     }
 
-    if (!data.email.trim()) {
+    if (!data.email) {
         errors.email = "لطفا ایمیل خود را وارد کنید"
     } else if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(data.email)){
-        errors.email = "آدرس ایمیل نا معتبر است"
+        errors.email = "آدرس ایمیل نامعتبر است"
     } else{
         delete errors.email
     }
 
-    if (!data.password.trim()) {
+    if (!data.password) {
         errors.password = "وارد کردن رمز اجباریست"
     } else if(!/^(?!.* )(?=.*\d)(?=.*[a-zA-Z]).{10,}$/g.test(data.password)){
         errors.password = "رمز شما باید بیشتر از ده کاراکتر و شامل عدد و حروف باشد"
@@ -24,7 +24,7 @@ export const validateUser = (data) => {
         delete errors.password
     }
 
-    if (!data.confirmPass.trim()) {
+    if (!data.confirmPass) {
         errors.confirmPass = "لطفا رمز خود را تایید کنید"
     } else if(data.confirmPass !== data.password){
         errors.confirmPass = "رمز ها مطابقت ندارند"

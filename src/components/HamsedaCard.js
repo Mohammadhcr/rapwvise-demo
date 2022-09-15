@@ -27,7 +27,6 @@ const HamsedaCard = (props) => {
             </div>
         </>
     );
-    
 };
 
 export default HamsedaCard;

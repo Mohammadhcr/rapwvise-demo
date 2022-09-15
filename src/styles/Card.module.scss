@@ -71,6 +71,13 @@ p.cardP{
 
 @media screen and (min-width: 641px) and (max-width: 780px){
 
+    .cards{
+    
+        a{
+            margin-bottom: 2rem;
+        }
+    }
+    
     .card{
 
         .cardPhoto{
@@ -87,8 +94,14 @@ p.cardP{
 
 @media screen and (min-width: 481px) and (max-width: 640px){
 
+    .cards{
+    
+        a{
+            margin-bottom: 2rem;
+        }
+    }
+    
     .card{
-        margin-bottom: 2rem;
 
         .cardPhoto{
             width: 120px;
@@ -114,10 +127,14 @@ p.cardP{
 
 @media screen and (min-width: 120px) and (max-width: 480px){
 
+    .cards{
+    
+        a{
+            margin-bottom: 1.5rem;
+        }
+    }
+    
     .card{
-
-        margin-bottom: 1.5rem;
-
         .cardPhoto{
             width: 100px;
             height: 100px;

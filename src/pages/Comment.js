@@ -12,17 +12,13 @@ const Background = styled.div`
         background: var(--bodyBack);
         letter-spacing: 0.5px;
         transition: all 0.3s;
-
-        @media screen and (min-width: 120px) and (max-width: 780px){
-            height: auto;
-        }
     `;
 
 const Comment = () => {
 
     const params = useParams();
 
-    const {wrapper, info, album, artist, description, artwork, statick, comment, commentParagraph} = styles;
+    const {wrapper, info, album, artist, description, artwork, statick, comment, commentContainer, commentParagraph} = styles;
 
     const data = commentDB[params.id - 1];
     
@@ -38,23 +34,32 @@ const Comment = () => {
                                 {data.releaseDate}
                             </span>
                     </div>
-                    <div className={comment}>
-                        <p className={commentParagraph}>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                        </p>
-                        <i class='bx bxs-moon'></i>
+                    <div className={commentContainer}>
+                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
+                        <div className={comment}>
+                            <p className={commentParagraph}>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
+                            </p>
+                            <i className='bx bxs-moon'></i>
+                        </div>
                     </div>
-                    <div className={comment}>
-                        <p className={commentParagraph}>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                        </p>
-                        <i class='bx bxs-moon'></i>
+                    <div className={commentContainer}>
+                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
+                        <div className={comment}>
+                            <p className={commentParagraph}>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
+                            </p>
+                            <i className='bx bxs-moon'></i>
+                        </div>
                     </div>
-                    <div className={comment}>
-                        <p className={commentParagraph}>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                        </p>
-                        <i class='bx bxs-moon'></i>
+                    <div className={commentContainer}>
+                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
+                        <div className={comment}>
+                            <p className={commentParagraph}>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
+                            </p>
+                            <i className='bx bxs-moon'></i>
+                        </div>
                     </div>
                 </div>
                 <div className={artwork}>

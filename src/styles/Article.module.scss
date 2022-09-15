@@ -7,12 +7,12 @@
     flex-direction: column-reverse;
     width: 100%;
     min-height: 100vh;
-    padding: 4rem 25% 0;
+    padding: 4rem 25%;
     user-select: none;
 }
 
 .artwork{
-    width: 80%;
+    width: 70%;
     height: auto;
     padding: 4rem 0 2rem;
     
@@ -32,7 +32,6 @@
     font-size: 3rem;
     font-family: "IRANSansX700";
     color: var(--color1);
-    padding-bottom: 0.5rem;
 }
 
 .artist{
@@ -68,107 +67,52 @@
 .post{
     height: auto;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     background: var(--color6);
     border-radius: 1rem;
-    margin-bottom: 4rem;
     line-height: 2rem;
 
     .postParagraph{
         color: var(--color1);
         font-family: "IRANSansX400";
         font-size: 1rem;
-    }
-}
 
-.avai{
-    font-family: "IRANSansX600";
-    color: var(--color1);
-    font-size: 1.5rem;
-}
+        p{
+            padding-bottom: 8px;
 
-.links{
-    display: flex;
-    align-items: center;
-    padding: 1.5rem 0;
-
-    .soundCloud{
-        color: #ff3300;
-        border: 2px solid #ff3300;
-
-        &:hover{
-            background: #ff3300;
-            color: #fff;
-        }
-    }
-
-    .spotify{
-        color: #1DB954;
-        border: 2px solid #1DB954;
-
-        &:hover{
-            background: #1DB954;
-            color: #fff;
-        }
-    }
-
-    .applePod{
-        color: #B150E2;
-        border: 2px solid #B150E2;
-
-        &:hover{
-            background: #B150E2;
-            color: #fff;
-        }
-    }
-    
-    a{
-        width: 30%;
-        // background: var(--color6);
-        border-radius: 0.7rem;
-        // color: var(--color1);
-        padding: 0.9rem;
-        text-align: center;
-        font-family: "IRANSansX400";
-        margin: auto;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        i{
-            font-size: 1.2rem;
-            padding-left: 5px;
+            &:last-child{
+                padding-bottom: 0;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
     .wrapper{
-        padding: 4rem 20% 0;
+        padding: 4rem 20%;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .wrapper{
-        padding: 4rem 20% 0;
+        padding: 4rem 20%;
     }
 }
    
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .wrapper{
-        padding: 4rem 15% 0;
+        padding: 4rem 15%;
     }
 }
     
 @media screen and (min-width: 641px) and (max-width: 780px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 4rem 0;
+        padding: 4rem;
     }
 
     .artwork{
-        width: 100%;
+        width: 80%;
         padding: 4rem 0 2rem;
     }
 
@@ -177,7 +121,7 @@
     }
 
     .album{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .artist{
@@ -194,11 +138,11 @@
 @media screen and (min-width: 481px) and (max-width: 640px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 3rem 0;
+        padding: 4rem 3rem;
     }
 
     .artwork{
-        width: 100%;
+        width: 90%;
         padding: 3rem 0 2rem;
     }
 
@@ -207,7 +151,7 @@
     }
 
     .album{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .artist{
@@ -219,21 +163,12 @@
         margin: 1rem 0;
         padding: 1rem 0;
     }
-
-    .links{
-        flex-direction: column;
-
-        a{
-            margin: 1rem auto;
-            width: 60%;
-        }
-    }
 }
     
 @media screen and (min-width: 120px) and (max-width: 480px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 1.5rem 0;
+        padding: 4rem 1.5rem;
     }
 
     .artwork{
@@ -245,29 +180,21 @@
         width: 100%;
     }
 
+    .post{
+        padding: 1rem;
+    }
+
     .album{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .artist{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .description{
         font-size: 1rem;
         margin: 1rem 0;
         padding: 1rem 0;
-    }
-
-    .links{
-        flex-direction: column;
-        justify-content: center;
-        padding: 0rem;
-        padding-bottom: 5rem;
-
-        a{
-            margin: 0.9rem auto;
-            width: 80%;
-        }
     }
 }

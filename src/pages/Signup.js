@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from '../styles/Signup.module.scss'
+import styles from '../styles/Signup.module.scss';
 import { validateUser } from '../helper/validateUser';
 
 const Signup = () => {
 
-    const {sForm, signup, title, inputs, submit, options, socialLoginButtons, errMsg, socialLoginButton, google, facebook, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
+    const {sForm, signup, title, inputs, submit, options, socialLoginButtons, errMsg, socialLoginButton, google, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
 
     const [user, setUser] = useState({
         name: "",
         email: "",
         password: "",
         confirmPass: "",
+        isLoggedIn: false
     });
 
     const [error, setError] = useState({});
@@ -27,13 +28,10 @@ const Signup = () => {
         setError(validateUser(user))
 
         if(!Object.keys(error).length){
-            setUser({
-                name: "",
-                email: "",
-                password: "",
-                confirmPass: "",
-            })
+            setUser({...user, isLoggedIn: true})
         }
+
+        console.log(user)
     }
 
     return (
