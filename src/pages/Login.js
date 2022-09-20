@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from '../styles/Login.module.scss'
 
 const Login = () => {
 
-    const {lForm, login, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, facebook, apple, bxl, bxlLog, placeholder, input} = styles;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    const {lForm, login, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, apple, bxl, placeholder, input} = styles;
 
     const [user, setUser] = useState({
         email: "",
@@ -39,7 +43,7 @@ const Login = () => {
                     </div>
                 </div>
                 <div className={submit}>
-                    <button type="submit"><i className={`bx bx-log-in-circle ${bxlLog}`}></i> ورود به حساب</button>
+                    <button type="submit">ورود به حساب</button>
                 </div>
                 <div className={options}>
                     <p>حساب کاربری ندارید؟ <Link to="/signup">ثبت نام</Link></p>

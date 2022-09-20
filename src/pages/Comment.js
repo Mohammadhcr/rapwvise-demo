@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { commentDB } from '../database/commentDB'
@@ -15,6 +15,10 @@ const Background = styled.div`
     `;
 
 const Comment = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const params = useParams();
 
@@ -34,33 +38,18 @@ const Comment = () => {
                                 {data.releaseDate}
                             </span>
                     </div>
-                    <div className={commentContainer}>
-                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
-                        <div className={comment}>
-                            <p className={commentParagraph}>
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                            </p>
-                            <i className='bx bxs-moon'></i>
+                    {data.commentBody.map(commentPost =>
+                        <div className={commentContainer} key={commentPost.user}>
+                            <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' alt='User Avatar' />
+                            <div className={comment}>
+                                <h2>{commentPost.user}</h2>
+                                <p className={commentParagraph}>
+                                    {commentPost.body}
+                                </p>
+                                <i className='bx bxs-moon'></i>
+                            </div>
                         </div>
-                    </div>
-                    <div className={commentContainer}>
-                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
-                        <div className={comment}>
-                            <p className={commentParagraph}>
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                            </p>
-                            <i className='bx bxs-moon'></i>
-                        </div>
-                    </div>
-                    <div className={commentContainer}>
-                        <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' />
-                        <div className={comment}>
-                            <p className={commentParagraph}>
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-                            </p>
-                            <i className='bx bxs-moon'></i>
-                        </div>
-                    </div>
+                    )}
                 </div>
                 <div className={artwork}>
                     <img src={data.artwork} alt="artwork" />

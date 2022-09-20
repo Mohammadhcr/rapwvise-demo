@@ -1,4 +1,4 @@
-@import "root";
+@import './root.scss';
 
 .sForm{
     width: 100%;
@@ -95,7 +95,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    
+
     &:hover{
         background: var(--color4);
         color: #fff;
@@ -175,11 +175,47 @@
     color: #fff;
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px){
-
-    .sForm{
-        background: var(--color5);
+@media screen and (min-width: 641px) and (max-width: 780px){
+    .signup{
+        flex-direction: column;
     }
+
+    .rightSide{
+        padding-top: 1.8rem;
+        border-top: 1px solid var(--color7);
+        margin-top: 1.8rem;
+        padding-right: 0;
+        border-right: 0;
+        margin-right: 0;
+        display: block;
+    }
+
+    .socialLoginButton{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px){
+    .signup{
+        flex-direction: column;
+    }
+
+    .rightSide{
+        padding-top: 1.8rem;
+        border-top: 1px solid var(--color7);
+        margin-top: 1.8rem;
+        padding-right: 0;
+        border-right: 0;
+        margin-right: 0;
+        display: block;
+    }
+
+    .socialLoginButton{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
 
     .title h1{
         font-size: 2.2rem;

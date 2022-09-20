@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
@@ -6,16 +6,23 @@ import styles from '../styles/RapWVise.module.scss';
 
 const RapWVise = () => {
 
-    const {rapWVise, rTitle, rText, hamseda, hTitle, hText, linkIcon, absoIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    const {rapWVise, rTitle, rText, hamseda, hTitle, scrollIcon, hText, linkIcon, absoIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
 
     return (
         <>
             <div className={rapWVise}>
                 <div className={rTitle}>
-                    <h1>وبسایت رپوایز</h1>
+                    <h1>رپوایز</h1>
                 </div>
                 <div className={rText}>
                     <p>وبسایت نقد و بررسی آثار رپ فارسی</p>
+                </div>
+                <div className={scrollIcon}>
+                    <i className='bx bx-chevron-down'></i>
                 </div>
             </div>
             <div className={hamseda}>
@@ -63,7 +70,7 @@ const RapWVise = () => {
                 <div className={cText}>
                     <p>در این بخش نظرات کاربران رپ وایز رو راجع به موسیقی رپ منعکس می کنیم</p>
                 </div>
-                <Link to='/comments'>
+                <Link to='/comments/#'>
                     <div className={link}>
                         <div className={linkIcon}>
                             <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>

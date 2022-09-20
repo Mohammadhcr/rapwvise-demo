@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
+import rapwviseLogo from '../files/rapwvise.png';
 
-import styles from '../styles/Navbar.module.scss'
+import styles from '../styles/Navbar.module.scss';
 
 const Navbar = (props) => {
 
     const [menu, setMenu] = useState(false);
 
-    const {leftSide, logoTitle, rightSide, toggle, userAccount, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, toggleActive, bxMoon, bxSun, menuItems, menuUser} = styles;
-
-    const clickHandler = () =>{
+    const clickHandler = () => {
         setMenu(!menu);
     }
+
+    const menuCloser = () => {
+        setMenu(false)
+    }
     
+    const {leftSide, logoTitle, rightSide, toggle, menuClose, rapWViseLogo, userAccount, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, toggleActive, bxMoon, bxSun, menuItems, menuUser} = styles;
+
     return (
         <>
             <div className={`${menuList} ${menu ? `${menuListActive}` : ""}`}>
@@ -27,6 +32,8 @@ const Navbar = (props) => {
                     <Link to="/signup" onClick={clickHandler}><li><i className='bx bx-user-plus'></i> ثبت نام</li></Link>
                 </ul>
             </div>
+            <div onClick={menuCloser} className={`${menu ? `${menuClose}` : ""}`}>
+            </div>
             <header>
                 <div className={leftSide}>
                     <div className={`${hamburgerMenu} ${menu ? `${hamburgerMenuActive}` : ""}`} onClick={clickHandler}>
@@ -36,7 +43,8 @@ const Navbar = (props) => {
                     </div>
                     <div className={logoTitle}>
                         <Link to="/">
-                            <h1>رپوایز</h1>
+                            <img src={rapwviseLogo} className={rapWViseLogo} />
+                            {/* <h1>رپوایز</h1> */}
                         </Link>
                     </div>
                     <nav>
@@ -63,7 +71,6 @@ const Navbar = (props) => {
             </header>
         </>
     );
-
 };
 
 export default Navbar;

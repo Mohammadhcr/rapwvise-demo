@@ -1,12 +1,14 @@
+@import './root.scss';
+
 .rapWVise, .hamseda, .top10, .comments{
     padding: 5rem 10rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
     .tTitle, .rTitle, .cTitle, .hTitle{
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
 
         h1, h2{
             font-size: 3rem;
@@ -21,10 +23,14 @@
     }
 
     .rText, .hText, .cText, .tText{
-        color: var(--color2);
-        text-align: center;
-        line-height: 1.8rem;
         padding-bottom: 3rem;
+
+        p{
+            color: var(--color2);
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 2rem;
+        }
     }
 
         .link{
@@ -68,9 +74,59 @@
         }
 }
 
+@-webkit-keyframes scrollSlide {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-24px);
+              transform: translateY(-24px);
+    }
+}
+@keyframes scrollSlide {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-24px);
+              transform: translateY(-24px);
+    }
+}
+  
+
 .rapWVise{
     background: var(--color6);
-    padding-top: 8rem;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+
+    .scrollIcon{
+        position: absolute;
+        bottom: 1rem;
+
+        i{
+            font-size: 5rem;
+            color: var(--color1);
+            -webkit-animation: scrollSlide 0.7s infinite alternate;
+                        animation: scrollSlide 0.7s infinite alternate;
+        }
+    }
+
+    .rTitle{
+
+        h1{
+            font-size: 5rem;
+        }
+    }
+
+    .rText{
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .hamseda{
@@ -120,31 +176,38 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
 
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 5rem 8rem;
+    }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
 
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 5rem 6rem;
+    }
 }
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
 
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 5rem 5rem;
+    }
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){
 
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 5rem 4rem;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 640px){
-
-}
-
-@media screen and (min-width: 120px) and (max-width: 480px){
-
+    
     .rapWVise, .hamseda, .top10, .comments{
         padding: 4rem 2rem;
     
         .tTitle, .rTitle, .cTitle, .hTitle{
-            padding-bottom: 1rem;
     
             h1, h2{
                 font-size: 2.6rem;
@@ -173,6 +236,59 @@
     }
 
     .rapWVise{
-        padding-top: 7rem;
+        padding: 0;
+
+        .rTitle{
+            
+            h1{
+                font-size: 4rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+
+    .rapWVise, .hamseda, .top10, .comments{
+        padding: 4rem 1.5rem;
+    
+        .tTitle, .rTitle, .cTitle, .hTitle{
+    
+            h1, h2{
+                font-size: 2.6rem;
+            }
+        }
+    
+        .links{
+    
+            .link{
+                width: auto;
+                margin: 3rem 1rem;
+                padding: 0.7rem;
+    
+                .linkPhoto{
+                    width: 150px;
+                }
+    
+                .linkContent{
+    
+                    h2{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .rapWVise{
+        padding: 0;
+
+        .rTitle{
+            
+            h1{
+                font-size: 4rem;
+            }
+        }
     }
 }

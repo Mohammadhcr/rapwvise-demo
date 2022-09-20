@@ -1,13 +1,14 @@
-@import "root";
+@import './root.scss';
 
-.myMain{
-    min-height: 100vh;
+.mainContainer{
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 10rem;
+    padding: 4rem 12rem;
 
-    .myName{
+    .aboutUsTitle{
         padding-bottom: 5rem;
         border-bottom: 2px solid var(--color7);
         text-align: center;
@@ -26,16 +27,18 @@
         }
     }
 
-    .mySkillsContact{
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-
-    .myLinks{
+    .contactSection{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+    }
+
+    .contactLinks{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         margin: auto;
         text-align: center;
 
@@ -46,11 +49,10 @@
             padding: 5rem 0 2rem;
         }
 
-        .myLinksLink{
+        .cLink{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 0 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
 
             a{
                 padding: 0.8rem 0;
@@ -64,7 +66,7 @@
                 border-radius: 0.7rem;
 
                 i{
-                    padding-left: 5px;
+                    padding-left: 6px;
                 }
             }
         }
@@ -72,19 +74,19 @@
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
-    .myMain{
-        padding: 4rem 8rem;
+    .mainContainer{
+        padding: 4rem 10rem;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
-    .myMain{
-        padding: 4rem 6rem;
+    .mainContainer{
+        padding: 4rem 8rem;
 
-        .myLinks{
+        .contactLinks{
             width: 80%;
 
-            .myLinksLink{
+            .cLink{
                 padding: 0 1rem;
             }
         }
@@ -92,10 +94,10 @@
 }
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
-    .myMain{
-        padding: 4rem 4rem;
+    .mainContainer{
+        padding: 4rem 6rem;
     
-        .myName{
+        .aboutUsTitle{
             padding-bottom: 4rem;
     
             h1{
@@ -107,30 +109,25 @@
             }
         }
     
-        .myLinks{
+        .contactLinks{
             width: 90%;
+
+            .cLink{
+                padding: 0 1rem;
+            }
     
             h2{
                 padding: 4rem 0 2rem;
-            }
-        }
-
-        .myLinks{
-
-            .myLinksLink{
-                padding: 0 1rem;
             }
         }
     }
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){
-    .myMain{
-        height: auto;
-        min-height: 100vh;
-        padding: 4rem 3rem;
+    .mainContainer{
+        padding: 4rem 4rem;
 
-        .myName{
+        .aboutUsTitle{
             padding-bottom: 3rem;
             padding-top: 2rem;
 
@@ -143,18 +140,18 @@
             }
         }
 
-        .mySkillsContact{
+        .contactSection{
             flex-direction: column-reverse;
         }
 
-        .myLinks{
+        .contactLinks{
             width: 100%;
 
             h2{
                 padding: 3rem 0 2rem;
             }
 
-            .myLinksLink{
+            .cLink{
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -162,12 +159,10 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 640px){
-    .myMain{
-        height: auto;
-        min-height: 100vh;
+    .mainContainer{
         padding: 4rem 2rem;
 
-        .myName{
+        .aboutUsTitle{
             padding-bottom: 3rem;
             padding-top: 2rem;
 
@@ -180,11 +175,11 @@
             }
         }
 
-        .mySkillsContact{
+        .contactSection{
             flex-direction: column-reverse;
         }
 
-        .myLinks{
+        .contactLinks{
             border-right: none;
             width: 100%;
 
@@ -192,7 +187,7 @@
                 padding: 3rem 0 2rem;
             }
 
-            .myLinksLink{
+            .cLink{
                 grid-template-columns: repeat(2, 1fr);
                 padding: 0 1rem;
             }
@@ -201,12 +196,10 @@
 }
 
 @media screen and (min-width: 120px) and (max-width: 480px){
-    .myMain{
-        height: auto;
-        min-height: 100vh;
+    .mainContainer{
         padding: 4rem 1.5rem;
 
-        .myName{
+        .aboutUsTitle{
             padding-bottom: 3rem;
             padding-top: 2rem;
 
@@ -219,11 +212,11 @@
             }
         }
 
-        .mySkillsContact{
+        .contactSection{
             flex-direction: column;
         }
 
-        .myLinks{
+        .contactLinks{
             border-right: none;
             width: 100%;
 
@@ -232,7 +225,7 @@
                 font-size: 1.8rem;
             }
 
-            .myLinksLink{
+            .cLink{
                 grid-template-columns: repeat(1, 1fr);
                 padding: 0;
             }

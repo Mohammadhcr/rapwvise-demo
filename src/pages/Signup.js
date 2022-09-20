@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from '../styles/Signup.module.scss';
 import { validateUser } from '../helper/validateUser';
 
 const Signup = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const {sForm, signup, title, inputs, submit, options, socialLoginButtons, errMsg, socialLoginButton, google, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
 
@@ -28,10 +32,8 @@ const Signup = () => {
         setError(validateUser(user))
 
         if(!Object.keys(error).length){
-            setUser({...user, isLoggedIn: true})
+            setUser({...user, isLoggedIn: true});
         }
-
-        console.log(user)
     }
 
     return (
@@ -84,7 +86,7 @@ const Signup = () => {
                         </div>
                     </div>
                     <div className={submit}>
-                        <button type="submit" onClick={signupAuthentication}><i className='bx bx-plus'></i> ساخت حساب کاربری</button>
+                        <button type="submit" onClick={signupAuthentication}>ساخت حساب کاربری</button>
                     </div>
                 </div>
                 <div className={rightSide}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import styles from '../styles/Card.module.scss'
+import styles from '../styles/Card.module.scss';
 import { articleDB } from '../database/articleDB';
 
 const ArticleCard = (props) => {
@@ -12,7 +12,7 @@ const ArticleCard = (props) => {
         <>
             <div className={cards}>
                 {articleDB.map(article =>
-                    <Link to={`/articles/${article.id}`}>
+                    <Link to={`/articles/${article.id}`} key={article.id}>
                         <div className={card}>
                             <div className={cardPhoto}>
                                 <img src={article.artwork} alt="Artwork" />
@@ -26,7 +26,6 @@ const ArticleCard = (props) => {
             </div>
         </>
     );
-    
 };
 
 export default ArticleCard;

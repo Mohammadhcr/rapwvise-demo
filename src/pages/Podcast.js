@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { hamsedaDB } from '../database/hamsedaDB'
+import { hamsedaDB } from '../database/hamsedaDB';
 
 import styled from 'styled-components';
 import styles from '../styles/Podcast.module.scss';
@@ -15,6 +15,10 @@ const Background = styled.div`
     `;
 
 const Podcast = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const params = useParams();
 
@@ -40,9 +44,9 @@ const Podcast = () => {
                     
                     <h2 className={avai}>شنیدن پادکست:</h2>
                     <div className={links}>
-                        <a className={spotify} href={data.spotify} target="_blank"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
-                        <a className={applePod} href={data.apple} target="_blank"><i className='bx bxl-apple'></i> اپل پادکست</a>
-                        <a className={soundCloud} href={data.soundcloud} target="_blank"><i className='bx bxl-soundcloud'></i> ساندکلاد</a>
+                        <a className={spotify} href={data.spotify} target="_blank" rel="noopener noreferrer"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
+                        <a className={applePod} href={data.apple} target="_blank" rel="noopener noreferrer"><i className='bx bxl-apple'></i> اپل پادکست</a>
+                        <a className={soundCloud} href={data.soundcloud} target="_blank" rel="noopener noreferrer"><i className='bx bxl-soundcloud'></i> ساندکلاد</a>
                     </div>
                 </div>
                 <div className={artwork}>

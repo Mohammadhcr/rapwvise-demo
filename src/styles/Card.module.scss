@@ -1,4 +1,4 @@
-@import "root";
+@import './root.scss';
 
 .cards{
     padding-top: 2rem;
@@ -14,6 +14,7 @@
     background: var(--color6);
     width: 100%;
     min-width: 330px;
+    max-width: 720px;
     user-select: none;
     border-radius: 1rem;
     display: flex;
@@ -41,7 +42,8 @@
 .cardTitle{
     font-size: 1.7rem;
     color: var(--color1);
-    font-family: "IRANSansX600";
+    font-family: "IRANSansX700";
+    padding-bottom: 8px;
 }
 
 p.cardSubtitle{
@@ -53,20 +55,8 @@ p.cardSubtitle{
     
 p.cardP{
     font-size: 1rem;
-    color: #777;
+    color: var(--color2);
     font-family: "IRANSansX400";
-}
-
-@media screen and (min-width: 1281px) and (max-width: 1600px) {
-
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1280px){
-
-}
-
-@media screen and (min-width: 781px) and (max-width: 1024px){
-
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){
@@ -135,6 +125,8 @@ p.cardP{
     }
     
     .card{
+        min-width: auto;
+        
         .cardPhoto{
             width: 100px;
             height: 100px;

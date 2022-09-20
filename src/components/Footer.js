@@ -16,7 +16,7 @@ const Footer = () => {
                         </p>
                     </span>
                     <span>
-                        <p>ساخته شده توسط: <a href='https://mohammadhcr.ir' target='_blank'>Mohammad hcr</a></p>
+                        <p>ساخته شده توسط: <a href='https://mohammadhcr.ir' target='_blank' rel="noopener noreferrer">Mohammad hcr</a></p>
                     </span>
                 </div>
             </footer>

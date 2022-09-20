@@ -6,13 +6,13 @@ import { commentDB } from '../database/commentDB';
 
 const CommentCard = (props) => {
 
-    const {card, cardPhoto, cardContent, cardTitle, cardSubtitle, cardP, cards} = styles;
+    const {card, cardPhoto, cardContent, cardTitle, cardSubtitle, cards} = styles;
 
     return (
         <>
             <div className={cards}>
                 {commentDB.map(comment =>
-                    <Link to={`/comments/${comment.id}`}>
+                    <Link to={`/comments/${comment.id}`} key={comment.id}>
                         <div className={card}>
                             <div className={cardPhoto}>
                                 <img src={comment.artwork} alt="Artwork" />
@@ -27,7 +27,6 @@ const CommentCard = (props) => {
             </div>
         </>
     );
-    
 };
 
 export default CommentCard;

@@ -1,4 +1,4 @@
-@import "root";
+@import './root.scss';
 
 .wrapper{
     display: flex;
@@ -76,14 +76,6 @@
         color: var(--color1);
         font-family: "IRANSansX400";
         font-size: 1rem;
-
-        p{
-            padding-bottom: 8px;
-
-            &:last-child{
-                padding-bottom: 0;
-            }
-        }
     }
 }
 

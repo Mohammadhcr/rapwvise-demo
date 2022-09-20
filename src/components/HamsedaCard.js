@@ -12,7 +12,7 @@ const HamsedaCard = (props) => {
         <>
             <div className={cards}>
                 {hamsedaDB.map(podcast =>
-                    <Link to={`/hamseda/${podcast.id}`}>
+                    <Link to={`/hamseda/${podcast.id}`} key={podcast.id}>
                         <div className={card}>
                             <div className={cardPhoto}>
                                 <img src={podcast.artwork} alt="Artwork" />
