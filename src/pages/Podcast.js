@@ -10,7 +10,6 @@ const Background = styled.div`
         width: 100%;
         min-height: 100vh;
         background: var(--bodyBack);
-        letter-spacing: 0.5px;
         transition: all 0.3s;
     `;
 
@@ -18,7 +17,7 @@ const Podcast = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const params = useParams();
 

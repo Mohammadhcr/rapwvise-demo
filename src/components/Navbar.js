@@ -43,8 +43,9 @@ const Navbar = (props) => {
                     </div>
                     <div className={logoTitle}>
                         <Link to="/">
-                            <img src={rapwviseLogo} className={rapWViseLogo} />
-                            {/* <h1>رپوایز</h1> */}
+                            <div className={rapWViseLogo}>
+                                <img src={rapwviseLogo} />
+                            </div>
                         </Link>
                     </div>
                     <nav>

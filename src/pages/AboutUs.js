@@ -6,7 +6,7 @@ const AboutUs = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const {mainContainer, aboutUsTitle, contactLinks, contactSection, cLink} = styles;
     

@@ -8,7 +8,7 @@ const Hamseda = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const {itemContainer, itemText, itemTitle} = styles;
 

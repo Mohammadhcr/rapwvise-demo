@@ -8,7 +8,7 @@ const RapWVise = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const {rapWVise, rTitle, rText, hamseda, hTitle, scrollIcon, hText, linkIcon, absoIcon, comments, cTitle, cText, top10, tTitle, tText, link, linkContent} = styles;
 

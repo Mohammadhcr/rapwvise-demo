@@ -1,7 +1,8 @@
 @import './root.scss';
 
 .rapWVise, .hamseda, .top10, .comments{
-    padding: 5rem 10rem;
+    padding: 2rem 10rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,11 +15,6 @@
             font-size: 3rem;
             font-family: "IRANSansX900";
             text-align: center;
-            background: rgba(158,0,255,1);
-            background: linear-gradient(135deg, rgba(158,0,255,1), rgba(255,0,35,1));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
     }
 
@@ -98,8 +94,6 @@
 
 .rapWVise{
     background: var(--color6);
-    padding: 0;
-    height: 100vh;
     position: relative;
 
     .scrollIcon{
@@ -117,14 +111,19 @@
     .rTitle{
 
         h1{
-            font-size: 5rem;
+            font-size: 7rem;
+            background: rgba(158,0,255);
+            background: linear-gradient(135deg, rgba(158,0,255), rgba(255,0,35));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 
     .rText{
 
         p{
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
     }
 }
@@ -135,11 +134,7 @@
     .hTitle{
 
         h2{
-            background: rgb(0,255,119);
-            background: linear-gradient(135deg, rgba(0,255,119,1) 0%, rgba(0,142,255,1) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--color3);
         }
     }
 }
@@ -150,11 +145,7 @@
     .cTitle{
 
         h2{
-            background: rgb(255,72,0);
-            background: linear-gradient(135deg, rgba(255,72,0,1) 0%, rgba(255,239,0,1) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--color3);
         }
     }
 }
@@ -165,11 +156,7 @@
     .tTitle{
 
         h2{
-            background: rgb(255,0,241);
-            background: linear-gradient(135deg, rgba(255,0,241,1) 0%, rgba(0,255,128,1) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--color3);
         }
     }
 }
@@ -177,35 +164,35 @@
 @media screen and (min-width: 1281px) and (max-width: 1600px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 5rem 8rem;
+        padding: 2rem 8rem;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 5rem 6rem;
+        padding: 2rem 6rem;
     }
 }
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 5rem 5rem;
+        padding: 2rem 5rem;
     }
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 5rem 4rem;
+        padding: 2rem 4rem;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 640px){
     
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 4rem 2rem;
+        padding: 1rem 2rem;
     
         .tTitle, .rTitle, .cTitle, .hTitle{
     
@@ -236,7 +223,6 @@
     }
 
     .rapWVise{
-        padding: 0;
 
         .rTitle{
             
@@ -251,7 +237,7 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
 
     .rapWVise, .hamseda, .top10, .comments{
-        padding: 4rem 1.5rem;
+        padding: 1rem 20px;
     
         .tTitle, .rTitle, .cTitle, .hTitle{
     
@@ -282,12 +268,18 @@
     }
 
     .rapWVise{
-        padding: 0;
 
         .rTitle{
             
             h1{
                 font-size: 4rem;
+            }
+        }
+
+        .rText{
+
+            p{
+                font-size: 1.5rem;
             }
         }
     }

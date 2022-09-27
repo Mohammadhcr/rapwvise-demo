@@ -7,7 +7,7 @@ const Login = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const {lForm, login, title, inputs, submit, options, socialLoginButtons, socialLoginButton, google, apple, bxl, placeholder, input} = styles;
 
@@ -43,15 +43,15 @@ const Login = () => {
                     </div>
                 </div>
                 <div className={submit}>
-                    <button type="submit">ورود به حساب</button>
+                    <button type="submit">ورود به حساب کاربری</button>
                 </div>
                 <div className={options}>
-                    <p>حساب کاربری ندارید؟ <Link to="/signup">ثبت نام</Link></p>
+                    <p>حساب کاربری ندارید؟ <Link to="/signup">ثبت نام کنید</Link></p>
                 </div>
-                <div className={socialLoginButtons}>
+                {/* <div className={socialLoginButtons}>
                     <button className={`${socialLoginButton} ${google}`}><i className={`bx bxl-google ${bxl}`}></i> ورود با گوگل</button>
                     <button className={`${socialLoginButton} ${apple}`}><i className={`bx bxl-apple ${bxl}`}></i> ورود با اپل</button>
-                </div>
+                </div> */}
             </div>
         </form>
     );

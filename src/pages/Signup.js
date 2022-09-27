@@ -8,7 +8,7 @@ const Signup = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const {sForm, signup, title, inputs, submit, options, socialLoginButtons, errMsg, socialLoginButton, google, apple, bxl, input, placeholder, leftSide, rightSide} = styles;
 
@@ -39,7 +39,6 @@ const Signup = () => {
     return (
         <form className={sForm}>
             <div className={signup}>
-                <div className={leftSide}>
                     <div className={title}>
                         <h1>ثبت نام در رپوایز</h1>
                     </div>
@@ -88,16 +87,13 @@ const Signup = () => {
                     <div className={submit}>
                         <button type="submit" onClick={signupAuthentication}>ساخت حساب کاربری</button>
                     </div>
-                </div>
-                <div className={rightSide}>
-                    <div className={socialLoginButtons}>
+                    {/* <div className={socialLoginButtons}>
                         <button className={`${socialLoginButton} ${google}`}><i className={`bx bxl-google ${bxl}`}></i> ثبت نام با گوگل</button>
                         <button className={`${socialLoginButton} ${apple}`}><i className={`bx bxl-apple ${bxl}`}></i> ثبت نام با اپل</button>
-                    </div>
+                    </div> */}
                     <div className={options}>
-                        <p>قبلا ثبت نام کردید؟ <Link to="/login">ورود</Link></p>
+                        <p>قبلا ثبت نام کردید؟ <Link to="/login">وارد شوید</Link></p>
                     </div>
-                </div>
             </div>
         </form>
     );

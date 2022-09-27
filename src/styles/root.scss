@@ -74,11 +74,12 @@
 .lightMode{
   --color1: #050505;
   --color2: #656565;
-  --color3: rgba(158,0,255,1);
-  --color4: #0077ff;
+  --color3: #de006f;
+  --color4: #cc0093;
   --color5: #e3e4e8;
   --color6: #f3f4f8;
   --color7: #d3d4d8;
+  --color8: #0072F5;
   background: var(--color5);
   direction: rtl;
 }
@@ -86,11 +87,12 @@
 .darkMode{
   --color1: #fafafa;
   --color2: #858585;
-  --color3: rgba(158,0,255,1);
-  --color4: #0077ff;
+  --color3: #de006f;
+  --color4: #cc0093;
   --color5: #131418;
   --color6: #232428;
   --color7: #333438;
+  --color8: #0072F5;
   background: var(--color5);
   direction: rtl;
 }
