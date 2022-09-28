@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { hamsedaDB } from '../database/hamsedaDB';
-
 import styled from 'styled-components';
 import styles from '../styles/Podcast.module.scss';
 

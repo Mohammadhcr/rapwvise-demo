@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { articleDB } from '../database/articleDB'
-
 import styled from 'styled-components';
 import styles from '../styles/Article.module.scss';
 
