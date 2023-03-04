@@ -24,7 +24,7 @@ const Login = () => {
         <form className={lForm}>
             <div className={login}>
                 <div className={title}>
-                    <h1>ورود به رپوایز</h1>
+                    <h1>ورود به رپ‌وایز</h1>
                 </div>
                 <div className={inputs}>
                     <div className={input}>

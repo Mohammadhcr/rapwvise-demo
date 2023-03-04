@@ -25,6 +25,9 @@
 .info{
     width: 50%;
     color: var(--color1);
+    border-radius: 1rem;
+    padding: 2rem 1rem 0;
+    background: var(--color6);
 }
 
 .podcastInfo{
@@ -32,20 +35,20 @@
 }
 
 .episodeDesc{
-    font-family: "IRANSansX400";
+    font-family: "IRANSansX500";
     color: var(--color1);
     font-size: 1rem;
 }
 
 .album{
     font-size: 3rem;
-    font-family: "IRANSansX700";
+    font-weight: 700;
     color: var(--color1);
 }
 
 .artist{
     font-size: 1.8rem;
-    font-family: "IRANSansX600";
+    font-weight: 500;
     color: var(--color2);
     padding: 1.5rem 0;
 }
@@ -53,16 +56,15 @@
 .description{
     font-size: 1.2rem;
     color: var(--color2);
-    margin: 2rem 0;
-    padding: 2rem 1rem;
-    border-top: 2px solid var(--color2);
-    border-bottom: 2px solid var(--color2);
+    margin: 1rem 0;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     span{
         display: flex;
+        font-size: 1.1rem;
         font-family: "IRANSansX400";
         line-height: 2rem;
     }
@@ -70,12 +72,12 @@
     .statick{
         color: var(--color1);
         padding-left: 5px;
-        font-family: "IRANSansX600";
+        font-family: "IRANSansX400";
     }
 }
 
 .avai{
-    font-family: "IRANSansX600";
+    font-weight: 600;
     color: var(--color1);
     font-size: 1.5rem;
 }
@@ -86,18 +88,34 @@
     padding: 1.5rem 0;
 
     .soundCloud{
-        color: #fff;
-        background: #ff3300;
+        color: #ff3300;
+        background: var(--color7);
+        transition: all 0.3s;
+
+        &:hover{
+            color: #fff;
+            background: #ff3300;
+        }
     }
 
     .spotify{
-        color: #fff;
-        background: #1DB954;
+        color: #1DB954;
+        background: var(--color7);
+
+        &:hover{
+            color: #fff;
+            background: #1DB954;
+        }
     }
 
     .applePod{
-        color: #fff;
-        background: #9c36d7;
+        color: #9c36d7;
+        background: var(--color7);
+
+        &:hover{
+            color: #fff;
+            background: #9c36d7;
+        }
     }
     
     a{
@@ -105,7 +123,7 @@
         border-radius: 0.7rem;
         padding: 0.9rem;
         text-align: center;
-        font-family: "IRANSansX400";
+        font-weight: 400;
         margin: auto;
         font-size: 1.2rem;
         display: flex;
@@ -141,7 +159,7 @@
 @media screen and (min-width: 641px) and (max-width: 780px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 4rem 0;
+        padding: 4rem 4rem;
     }
 
     .artwork{
@@ -172,7 +190,7 @@
 @media screen and (min-width: 481px) and (max-width: 640px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 3rem 0;
+        padding: 4rem 3rem;
     }
 
     .artwork{
@@ -212,7 +230,7 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
     .wrapper{
         flex-direction: column-reverse;
-        padding: 4rem 2rem 0;
+        padding: 4rem 2rem;
     }
 
     .artwork{
@@ -242,8 +260,6 @@
     .links{
         flex-direction: column;
         justify-content: center;
-        padding: 0rem;
-        padding-bottom: 5rem;
 
         a{
             margin: 0.9rem auto;

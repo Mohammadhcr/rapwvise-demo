@@ -4,7 +4,7 @@ export const articleDB = [
         articleSubject: "برترین همکاری های رپ فارسی",
         articleCategory: "تاپ 10",
         articleAuthor: "گودرز هاشمی",
-        releaseDate: 2020, 
+        releaseDate: "1/1/2001", 
         artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
     },
     {

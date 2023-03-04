@@ -3,21 +3,25 @@
 .wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
     min-height: 100vh;
-    padding: 4rem 25%;
+    padding: 8rem 0;
     user-select: none;
 }
 
 .artwork{
-    width: 70%;
+    width: 100%;
     height: auto;
-    padding: 4rem 0 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     img{
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 1rem;
     }
@@ -29,38 +33,41 @@
 }
 
 .album{
-    font-size: 3rem;
-    font-family: "IRANSansX700";
+    font-size: 2.8rem;
+    font-weight: 800;
     color: var(--color1);
 }
 
 .artist{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-family: "IRANSansX600";
     color: var(--color2);
 }
 
 .description{
+    background: var(--color6);
+    border-radius: 1rem;
     font-size: 1.2rem;
     color: var(--color2);
     margin: 2rem 0;
-    line-height: 2rem;
-    padding: 2rem 1rem;
-    border-top: 2px solid var(--color2);
-    border-bottom: 2px solid var(--color2);
+    // line-height: 2rem;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
 
     span{
         display: flex;
         font-family: "IRANSansX400";
+        font-size: 1rem;
+        padding-left: 10px;
+        line-height: 1.8rem;
     }
 
     .statick{
         color: var(--color1);
         padding-left: 5px;
-        font-family: "IRANSansX600";
+        font-family: "IRANSansX500";
     }
 }
 
@@ -71,6 +78,7 @@
     background: var(--color6);
     border-radius: 1rem;
     line-height: 2rem;
+    text-align: justify;
 
     .postParagraph{
         color: var(--color1);
@@ -81,19 +89,19 @@
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
     .wrapper{
-        padding: 4rem 20%;
+        padding: 7rem 20%;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .wrapper{
-        padding: 4rem 20%;
+        padding: 6rem 20%;
     }
 }
    
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .wrapper{
-        padding: 4rem 15%;
+        padding: 5rem 15%;
     }
 }
     
@@ -119,12 +127,6 @@
     .artist{
         font-size: 1.5rem;
     }
-
-    .description{
-        font-size: 1.1rem;
-        margin: 1rem 0;
-        padding: 1rem 0;
-    }
 }
     
 @media screen and (min-width: 481px) and (max-width: 640px){
@@ -148,12 +150,6 @@
 
     .artist{
         font-size: 1.5rem;
-    }
-
-    .description{
-        font-size: 1rem;
-        margin: 1rem 0;
-        padding: 1rem 0;
     }
 }
     
@@ -182,11 +178,5 @@
 
     .artist{
         font-size: 1.2rem;
-    }
-
-    .description{
-        font-size: 1rem;
-        margin: 1rem 0;
-        padding: 1rem 0;
     }
 }

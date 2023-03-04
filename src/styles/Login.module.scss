@@ -16,7 +16,7 @@
     font-size: 2.5rem;
     color: var(--color3);
     user-select: none;
-    font-family: "IRANSansX900";
+    font-weight: 800;
 }
 
 .login{
@@ -42,17 +42,22 @@
             color: var(--color2);
             padding-bottom: 0.5rem;
             user-select: none;
-            font-family: "IRANSansX500";
+            font-weight: 400;
         }
 
         div{
             background: var(--color6);
+            border: 2px solid var(--color5);
             border-radius: 0.7rem;
             padding: 0.5rem;
             display: flex;
             font-size: 1.2rem;
             align-items: center;
             color: var(--color1);
+
+            &:hover{
+                border: 2px solid var(--color7);
+            }
 
             i{
                 color: var(--color1);
@@ -77,21 +82,27 @@
     padding: 12px 0;
     margin: 1rem 0 2rem;
     font-size: 1.2rem;
-    border: none;
-    background: var(--color8);
-    color: #fff;
+    border: 2px solid var(--color8);
+    background: var(--color5);
+    color: var(--color8);
     cursor: pointer;
     transition: all 0.2s;
-    font-family: "IRANSansX400";
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
+
+    &:hover{
+        background: var(--color8);
+        color: #fff;
+    }
 }
 
 .options{
     // border-top: 2px solid var(--color7);
     text-align: center;
+    user-select: none;
     // margin: 1.8rem 1rem;
 
 

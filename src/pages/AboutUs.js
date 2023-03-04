@@ -13,8 +13,8 @@ const AboutUs = () => {
     return (
         <div className={mainContainer}>
             <div className={aboutUsTitle}>
-                <h1>رپوایز</h1>
-                <h3>وبسایت نقد و بررسی آثار رپ فارسی</h3>
+                <h1>رپ‌وایز</h1>
+                <p>وبسایت نقد و بررسی آثار رپ فارسی</p>
             </div>
             <div className={contactSection}>
                 <div className={contactLinks}>
@@ -25,7 +25,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className={contactLinks}>
-                    <div><h2>شبکه های اجتماعی ما</h2></div>
+                    <div><h2>شبکه‌های اجتماعی ما</h2></div>
                     <div className={cLink}>
                         <a href="https://twitter.com/rapwvise" target="_blank" rel="noopener noreferrer"><i className='bx bxl-twitter'></i> توئیتر</a>
                         <a href="https://instagram.com/rapwvise" target="_blank" rel="noopener noreferrer"><i className='bx bxl-instagram'></i> اینستاگرام</a>
@@ -33,7 +33,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className={contactLinks}>
-                    <div><h2>پلتفرم های استریم پادکست همصدا</h2></div>
+                    <div><h2>پلتفرم‌های استریم پادکست همصدا</h2></div>
                     <div className={cLink}>
                         <a href="https://open.spotify.com/show/03Ruo9daBN4hEwmUqyRlHk?si=p7KO9ERaRe2rTZUgFUub2w&nd=1" target="_blank" rel="noopener noreferrer"><i className='bx bxl-spotify'></i> اسپاتیفای</a>
                         <a href="https://podcasts.apple.com/us/podcast/hamseda/id1522223127" target="_blank" rel="noopener noreferrer"><i className='bx bx-podcast'></i> اپل پادکست</a>

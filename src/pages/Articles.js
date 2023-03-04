@@ -16,10 +16,10 @@ const Top10s = () => {
         <>
             <div className={itemContainer}>
                 <div className={itemTitle}>
-                        <h2>مقالات و بررسی ها</h2>
+                        <h2>مقالات و بررسی‌ها</h2>
                     </div>
                     <div className={itemText}>
-                        <p>بررسی آثار، مقالات و لیست برترین های رپ فارسی</p>
+                        <p>بررسی آثار، مقالات و لیست برترین‌های رپ فارسی</p>
                     </div>
                 <ArticleCard />
             </div>

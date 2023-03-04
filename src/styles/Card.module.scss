@@ -16,10 +16,15 @@
     min-width: 330px;
     max-width: 720px;
     user-select: none;
+    border: 3px solid var(--color5);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     padding: 0.7rem;
+
+    &:hover{
+        border: 3px solid var(--color7);
+    }
 
     .cardPhoto{
         width: 150px;
@@ -40,23 +45,22 @@
 }
     
 .cardTitle{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--color1);
-    font-family: "IRANSansX700";
+    font-weight: 700;
     padding-bottom: 8px;
 }
 
 p.cardSubtitle{
     font-size: 1.1rem;
     color: var(--color2);
-    font-family: "IRANSansX500";
-    padding-bottom: 1rem;
+    font-weight: 300;
 }
     
 p.cardP{
     font-size: 1rem;
     color: var(--color2);
-    font-family: "IRANSansX400";
+    font-family: "IRANSansX300";
 }
 
 @media screen and (min-width: 641px) and (max-width: 780px){

@@ -40,7 +40,7 @@ const Signup = () => {
         <form className={sForm}>
             <div className={signup}>
                     <div className={title}>
-                        <h1>ثبت نام در رپوایز</h1>
+                        <h1>ثبت نام در رپ‌وایز</h1>
                     </div>
                     <div className={inputs}>
                         <div className={input}>

@@ -16,7 +16,7 @@ const RapWVise = () => {
         <>
             <div className={rapWVise}>
                 <div className={rTitle}>
-                    <h1>رپوایز</h1>
+                    <h1>رپ‌وایز</h1>
                 </div>
                 <div className={rText}>
                     <p>وبسایت نقد و بررسی آثار رپ فارسی</p>

@@ -59,8 +59,12 @@ const Navbar = (props) => {
                 </div>
                 <div className={rightSide}>
                     <div className={userAccount}>
-                        <span><Link to="/login"><i className='bx bx-user'></i> ورود</Link></span>
-                        <span><Link to="/signup"><i className='bx bx-user-plus'></i> ثبت نام</Link></span>
+                        <span><Link to="/login">
+                            {/* <i className='bx bx-user'></i> */}
+                             ورود</Link></span>
+                        <span><Link to="/signup">
+                            {/* <i className='bx bx-user-plus'></i> */}
+                             ثبت نام</Link></span>
                     </div>
                     <div className={`${toggle} ${props.theme ? `${toggleActive}` : ""}`}>
                         <span onClick={props.toggle}>
