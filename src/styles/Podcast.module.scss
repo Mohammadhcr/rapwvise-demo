@@ -89,8 +89,8 @@
 
     .soundCloud{
         color: #ff3300;
-        background: var(--color7);
-        transition: all 0.3s;
+        background: var(--color6);
+        border: 2px solid #ff3300;
 
         &:hover{
             color: #fff;
@@ -100,7 +100,8 @@
 
     .spotify{
         color: #1DB954;
-        background: var(--color7);
+        background: var(--color6);
+        border: 2px solid #1DB954;
 
         &:hover{
             color: #fff;
@@ -109,12 +110,13 @@
     }
 
     .applePod{
-        color: #9c36d7;
-        background: var(--color7);
+        color: #b150e2;
+        background: var(--color6);
+        border: 2px solid #b150e2;
 
         &:hover{
             color: #fff;
-            background: #9c36d7;
+            background: #b150e2;
         }
     }
     
@@ -125,7 +127,7 @@
         text-align: center;
         font-weight: 400;
         margin: auto;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         display: flex;
         align-items: center;
         justify-content: center;

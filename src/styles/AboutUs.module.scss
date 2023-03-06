@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 12rem;
+    padding: 4rem 0;
     user-select: none;
 
     .aboutUsTitle{
@@ -31,14 +31,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60%;
         margin: auto;
     }
 
     .contactLinks{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 750px;
         margin: auto;
         text-align: center;
 
@@ -79,28 +78,25 @@
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1600px){
-    .mainContainer{
-        padding: 4rem 10rem;
-    }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
-    .mainContainer{
-        padding: 4rem 8rem;
+    // .mainContainer{
+    //     padding: 4rem 0;
 
-        .contactLinks{
-            width: 80%;
+    //     .contactLinks{
+    //         width: 80%;
 
-            .cLink{
-                padding: 0 1rem;
-            }
-        }
-    }
+    //         .cLink{
+    //             padding: 0 1rem;
+    //         }
+    //     }
+    // }
 }
 
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .mainContainer{
-        padding: 4rem 6rem;
+        // padding: 4rem 0;
     
         .aboutUsTitle{
             padding-bottom: 4rem;
@@ -115,12 +111,12 @@
         }
 
         .contactSection{
-            flex-direction: column-reverse;
-            width: 100%;
+            // flex-direction: column-reverse;
+            // width: 100%;
         }
     
         .contactLinks{
-            width: 90%;
+            // width: 90%;
 
             .cLink{
                 padding: 0 1rem;
@@ -135,11 +131,11 @@
 
 @media screen and (min-width: 641px) and (max-width: 780px){
     .mainContainer{
-        padding: 4rem 4rem;
+        // padding: 4rem 0;
 
         .aboutUsTitle{
             padding-bottom: 3rem;
-            padding-top: 2rem;
+            // padding-top: 2rem;
 
             h1{
                 font-size: 5rem;
@@ -151,19 +147,19 @@
         }
 
         .contactSection{
-            flex-direction: column-reverse;
-            width: 100%;
+            // flex-direction: column-reverse;
+            // width: 100%;
         }
 
         .contactLinks{
-            width: 100%;
+            width: 600px;
 
             h2{
                 padding: 3rem 0 2rem;
             }
 
             .cLink{
-                grid-template-columns: repeat(2, 1fr);
+                // grid-template-columns: repeat(2, 1fr);
             }
         }
     }
@@ -171,7 +167,7 @@
 
 @media screen and (min-width: 481px) and (max-width: 640px){
     .mainContainer{
-        padding: 4rem 2rem;
+        // padding: 4rem 0;
 
         .aboutUsTitle{
             padding-bottom: 3rem;
@@ -187,20 +183,20 @@
         }
 
         .contactSection{
-            flex-direction: column-reverse;
-            width: 100%;
+            // flex-direction: column-reverse;
+            // width: 100%;
         }
 
         .contactLinks{
-            border-right: none;
-            width: 100%;
+            // border-right: none;
+            width: 400px;
 
             h2{
                 padding: 3rem 0 2rem;
             }
 
             .cLink{
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1, 1fr);
                 padding: 0 1rem;
             }
         }
@@ -209,11 +205,9 @@
 
 @media screen and (min-width: 120px) and (max-width: 480px){
     .mainContainer{
-        padding: 4rem 1.5rem;
 
         .aboutUsTitle{
-            padding-bottom: 3rem;
-            padding-top: 2rem;
+            padding-bottom: 2rem;
 
             h1{
                 font-size: 4rem;
@@ -225,13 +219,13 @@
         }
 
         .contactSection{
-            flex-direction: column;
-            width: 100%;
+            // flex-direction: column;
+            // width: 100%;
         }
 
         .contactLinks{
-            border-right: none;
-            width: 100%;
+            // border-right: none;
+            width: 300px;
 
             h2{
                 padding: 3rem 0 2rem;

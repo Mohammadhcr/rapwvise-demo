@@ -30,12 +30,12 @@ const RapWVise = () => {
                     <h2>پادکست همصدا</h2>
                 </div>
                 <div className={hText}>
-                    <p>همصدا يک پادكست موضوع محوره كه از ديد مخاطب ها، مسائل مختلف در حوزه‌ى رپ فارسى رو بررسى می كنه</p>
+                    <p>همصدا يک پادكست موضوع محوره كه از ديد مخاطب‌ها، مسائل مختلف در حوزه‌ى رپ فارسى رو بررسى می‌كنه</p>
                 </div>
                 <Link to='/hamseda'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                            <i className={`bx bxs-chevron-left ${absoIcon}`}></i>
                             <i className='bx bx-podcast'></i>
                         </div>
                         <div className={linkContent}>
@@ -46,15 +46,15 @@ const RapWVise = () => {
             </div>
             <div className={top10}>
                 <div className={tTitle}>
-                    <h2>مقالات و بررسی ها</h2>
+                    <h2>مقالات و بررسی‌ها</h2>
                 </div>
                 <div className={tText}>
-                    <p>بررسی آثار، مقالات و لیست برترین های رپ فارسی</p>
+                    <p>بررسی آثار، مقالات و لیست برترین‌های رپ فارسی</p>
                 </div>
                 <Link to='/articles'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                        <i className={`bx bxs-chevron-left ${absoIcon}`}></i>
                             <i className='bx bx-notepad'></i>
                         </div>
                         <div className={linkContent}>
@@ -68,12 +68,12 @@ const RapWVise = () => {
                     <h2>نظرات کاربران</h2>
                 </div>
                 <div className={cText}>
-                    <p>در این بخش نظرات کاربران رپ وایز رو راجع به موسیقی رپ منعکس می کنیم</p>
+                    <p>در این بخش نظرات کاربران رپ‌وایز رو راجع به موسیقی رپ منعکس می کنیم</p>
                 </div>
                 <Link to='/comments/#'>
                     <div className={link}>
                         <div className={linkIcon}>
-                            <i className={`bx bx-link-external bx-flip-horizontal ${absoIcon}`}></i>
+                            <i className={`bx bxs-chevron-left ${absoIcon}`}></i>
                             <i className='bx bx-message-dots'></i>
                         </div>
                         <div className={linkContent}>

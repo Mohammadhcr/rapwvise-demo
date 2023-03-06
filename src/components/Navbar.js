@@ -50,10 +50,10 @@ const Navbar = (props) => {
                     </div>
                     <nav>
                         <ul>
-                            <li><Link to="/hamseda"><i className='bx bx-podcast'></i> پادکست همصدا</Link></li>
-                            <li><Link to="/articles"><i className='bx bx-notepad'></i> مقالات و بررسی ها</Link></li>
-                            <li><Link to="/comments"><i className='bx bx-message-dots'></i> نظرات کاربران</Link></li>
-                            <li><Link to="/aboutus"><i className='bx bx-info-circle'></i> درباره ما</Link></li>
+                            <li><Link to="/hamseda"><hr /><i className='bx bx-podcast'></i> پادکست همصدا</Link></li>
+                            <li><Link to="/articles"><hr /><i className='bx bx-notepad'></i> مقالات و بررسی‌ها</Link></li>
+                            <li><Link to="/comments"><hr /><i className='bx bx-message-dots'></i> نظرات کاربران</Link></li>
+                            <li><Link to="/aboutus"><hr /><i className='bx bx-info-circle'></i> درباره ما</Link></li>
                         </ul>
                     </nav>
                 </div>

@@ -29,7 +29,7 @@ export const validateUser = (data) => {
     if (!data.confirmPass) {
         errors.confirmPass = "رمز خود را تایید کنید"
     } else if(data.confirmPass !== data.password){
-        errors.confirmPass = "رمز ها مطابقت ندارند"
+        errors.confirmPass = "رمز‌ها مطابقت ندارند"
     } else{
         delete errors.confirmPass
     }

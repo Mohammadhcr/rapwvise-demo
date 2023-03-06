@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className={copyright}>
                     <span>
                         <p>
-                            <i className='bx bx-copyright'></i> کپی رایت - تمامی حقوق برای وبسایت رپ‌وایز محفوظ است.
+                            © تمامی حقوق برای وب‌سایت رپ‌وایز محفوظ است.
                         </p>
                     </span>
                     <span>

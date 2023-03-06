@@ -19,7 +19,7 @@ export const commentDB = [
             },
         ],
         releaseDate: 2020, 
-        artwork: "https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c",
+        artwork: "https://i1.sndcdn.com/artworks-WUouANOJ0d0IkOtb-wefxzw-t500x500.jpg",
     },
     {
         id: 2, 
