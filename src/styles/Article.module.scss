@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 1200px;
+    width: 1000px;
     margin: auto;
     min-height: 100vh;
     padding: 8rem 0;
@@ -13,15 +13,16 @@
 }
 
 .artwork{
-    width: 100%;
+    width: 60%;
+    margin: auto;
     height: auto;
-    padding: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     
     img{
-    width: 60%;
+    width: 100%;
     height: auto;
     border-radius: 1rem;
     }
@@ -50,11 +51,11 @@
     font-size: 1.2rem;
     color: var(--color2);
     margin: 2rem 0;
-    // line-height: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     span{
         display: flex;
@@ -87,33 +88,28 @@
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1600px){
-    .wrapper{
-        padding: 7rem 20%;
-    }
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1280px){
     .wrapper{
-        padding: 6rem 20%;
+        padding: 7rem 0;
+        width: 840px;
     }
 }
    
 @media screen and (min-width: 781px) and (max-width: 1024px){
     .wrapper{
-        padding: 5rem 15%;
+        padding: 6rem 0;
+        width: 740px;
     }
 }
     
 @media screen and (min-width: 641px) and (max-width: 780px){
     .wrapper{
-        flex-direction: column-reverse;
-        padding: 4rem;
+        padding: 6rem 0;
+        width: 600px;
     }
 
     .artwork{
-        width: 80%;
-        padding: 4rem 0 2rem;
+        width: 70%;
     }
 
     .info{
@@ -131,13 +127,16 @@
     
 @media screen and (min-width: 481px) and (max-width: 640px){
     .wrapper{
-        flex-direction: column-reverse;
-        padding: 4rem 3rem;
+        padding: 6rem 0;
+        width: 440px;
+    }
+
+    .description{
+        margin: 1rem 0;
     }
 
     .artwork{
-        width: 90%;
-        padding: 3rem 0 2rem;
+        width: 80%;
     }
 
     .info{
@@ -155,13 +154,17 @@
     
 @media screen and (min-width: 120px) and (max-width: 480px){
     .wrapper{
-        flex-direction: column-reverse;
-        padding: 4rem 1.5rem;
+        padding: 6rem 0;
+        width: 350px;
+    }
+
+    .description{
+        margin: 1rem 0;
     }
 
     .artwork{
-        width: 100%;
-        padding: 2rem 0 1rem;
+        width: 90%;
+        margin-bottom: 1rem;
     }
 
     .info{
