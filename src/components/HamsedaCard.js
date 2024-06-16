@@ -14,9 +14,9 @@ const HamsedaCard = (props) => {
                 {hamsedaDB.map(podcast =>
                     <Link to={`/hamseda/${podcast.id}`} key={podcast.id}>
                         <div className={card}>
-                            {/* <div className={cardPhoto}>
+                            <div className={cardPhoto}>
                                 <img src={podcast.artwork} alt="Artwork" />
-                            </div> */}
+                            </div>
                             <div className={cardContent}>
                                 <h2 className={cardTitle}>{podcast.episodeNumber}: {podcast.episodeName}</h2>
                                 <p className={cardP}>{podcast.episodeDescription}</p>
