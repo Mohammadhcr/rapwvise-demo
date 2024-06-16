@@ -13,10 +13,11 @@ const ArticleCard = (props) => {
             <div className={cards}>
                 {articleDB.map(article =>
                     <Link to={`/articles/${article.id}`} key={article.id}>
-                        <div className={card}>
-                            <div className={cardPhoto}>
-                                <img src={article.artwork} alt="Artwork" />
-                            </div>
+                        <div className={card} style={{backgroundImage: `url(${article.artwork})`}}>
+                            // <div className={card}>
+                            // <div className={cardPhoto}>
+                                // <img src={article.artwork} alt="Artwork" />
+                            // </div>
                             <div className={cardContent}>
                                 <h2 className={cardTitle}>{article.articleSubject}</h2>
                             </div>
