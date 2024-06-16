@@ -14,9 +14,9 @@ const ArticleCard = (props) => {
                 {articleDB.map(article =>
                     <Link to={`/articles/${article.id}`} key={article.id}>
                         <div className={card}>
-                            {/* <div className={cardPhoto}>
+                            <div className={cardPhoto}>
                                 <img src={article.artwork} alt="Artwork" />
-                            </div> */}
+                            </div>
                             <div className={cardContent}>
                                 <h2 className={cardTitle}>{article.articleSubject}</h2>
                             </div>
