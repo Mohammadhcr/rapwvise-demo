@@ -41,7 +41,8 @@
 
 .artist{
     font-size: 1.3rem;
-    font-family: "IRANSansX600";
+    font-family: "IRANSansX";
+    font-weight: 600;
     color: var(--color2);
 }
 
@@ -59,7 +60,8 @@
 
     span{
         display: flex;
-        font-family: "IRANSansX400";
+        font-family: "IRANSansX";
+        font-weight: 400;
         font-size: 1rem;
         padding-left: 10px;
         line-height: 1.8rem;
@@ -68,7 +70,8 @@
     .statick{
         color: var(--color1);
         padding-left: 5px;
-        font-family: "IRANSansX500";
+        font-family: "IRANSansX";
+        font-weight: 500;
     }
 }
 
@@ -83,7 +86,8 @@
 
     .postParagraph{
         color: var(--color1);
-        font-family: "IRANSansX400";
+        font-family: "IRANSansX";
+        font-weight: 400;
         font-size: 1rem;
     }
 }
