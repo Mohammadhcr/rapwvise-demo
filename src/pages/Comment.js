@@ -40,7 +40,7 @@ const Comment = () => {
                     </div>
                     {data.commentBody.map(commentPost =>
                         <div className={commentContainer} key={commentPost.user}>
-                            <img src='https://i.scdn.co/image/ab67616d0000b27323dc26dfeae828fb5383147c' alt='User Avatar' />
+                            <img src='https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg' alt='User Avatar' />
                             <div className={comment}>
                                 <h2>{commentPost.user}</h2>
                                 <p className={commentParagraph}>
