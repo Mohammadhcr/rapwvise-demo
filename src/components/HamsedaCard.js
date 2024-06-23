@@ -18,8 +18,9 @@ const HamsedaCard = (props) => {
                                 {/* <img src={comment.artwork} alt="Artwork" /> */}
                             {/* </div> */}
                             <div className={cardContent}>
-                                <h2 className={cardTitle}>{podcast.episodeNumber}: {podcast.episodeName}</h2>
-                                <p className={cardP}>مطالعه مطلب <i class='bx bxs-plane-alt'></i></p>
+                                <h2 className={cardTitle}>{podcast.episodeName}</h2>
+                                <h2 className={cardSubtitle}>{podcast.episodeNumber}</h2>
+                                <p className={cardP}>شنیدن پادکست <i class='bx bx-headphone'></i></p>
                             </div>
                         </div>
                     </Link>
