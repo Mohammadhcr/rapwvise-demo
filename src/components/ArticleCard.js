@@ -19,7 +19,7 @@ const ArticleCard = (props) => {
                             {/* </div> */}
                             <div className={cardContent}>
                                 <h2 className={cardTitle}>{article.articleSubject}</h2>
-                                <p className={cardP}>مطالعه مطلب <i class='bx bxs-plane-alt'></i></p>
+                                <p className={cardP}>مطالعه مطلب <i class='bx bxs-bookmark'></i></p>
                             </div>
                         </div>
                     </Link>
