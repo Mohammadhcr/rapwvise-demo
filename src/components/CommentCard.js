@@ -18,9 +18,9 @@ const CommentCard = (props) => {
                                 {/* <img src={comment.artwork} alt="Artwork" /> */}
                             {/* </div> */}
                             <div className={cardContent}>
-                                <h2 className={cardTitle}>{comment.commentNumber}</h2>
-                                <p className={cardSubtitle}>{comment.commentSubject} از {comment.commentSubtitle}</p>
-                                <p className={cardP}>مطالعه مطلب <i class='bx bxs-plane-alt'></i></p>
+                                <h2 className={cardTitle}>{comment.commentSubject}</h2>
+                                <p className={cardSubtitle}>{comment.commentSubtitle}</p>
+                                <p className={cardP}>مشاهده نظرات <i class='bx bxs-chat' ></i></p>
                             </div>
                         </div>
                     </Link>
