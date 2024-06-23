@@ -30,8 +30,8 @@ const Comment = () => {
         <Background>
             <div className={wrapper}>
                 <div className={info}>
-                    <h2 className={album}>{data.commentNumber}</h2>
-                    <h3 className={artist}>{data.commentSubject} از {data.commentSubtitle}</h3>
+                    <h2 className={album}>{data.commentSubject}</h2>
+                    <h3 className={artist}>{data.commentSubtitle}</h3>
                     <div className={description}>
                             <span>
                                 <span className={statick}>تاریخ انتشار:</span>
