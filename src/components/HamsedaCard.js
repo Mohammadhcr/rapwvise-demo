@@ -19,7 +19,7 @@ const HamsedaCard = (props) => {
                             {/* </div> */}
                             <div className={cardContent}>
                                 <h2 className={cardTitle}>{podcast.episodeName}</h2>
-                                <h2 className={cardSubtitle}>{podcast.episodeNumber}</h2>
+                                <p className={cardSubtitle}>{podcast.episodeNumber}</p>
                                 <p className={cardP}>شنیدن پادکست <i class='bx bx-headphone'></i></p>
                             </div>
                         </div>
